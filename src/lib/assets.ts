@@ -46,7 +46,7 @@ export function projectAssets(slug: ProjectSlug) {
   return {
     hero: `${base}/hero.webp`,
     card: `${base}/card.webp`,
-    croqui: `${base}/croqui.webp`,
+    croqui: `${base}/croqui.json`,
     gallery: (index: number) => `${base}/gallery/${String(index).padStart(2, "0")}.webp`,
   }
 }

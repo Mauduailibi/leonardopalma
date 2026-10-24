@@ -19,6 +19,8 @@ export type Project = {
   coordinates?: string
   highlights?: string[]
   featured: boolean
+  /** Tem croqui a lápis (croqui.json) para o efeito assinatura do hero */
+  croqui?: boolean
   imageCaptions: {
     hero: string
     card: string
@@ -87,6 +89,7 @@ export const projects: Project[] = [
     location: "[Lacuna]",
     coordinates: "[Lacuna]",
     featured: true,
+    croqui: true,
     imageCaptions: {
       hero: "imagem 3:2 · área de lazer com piscina ao entardecer",
       card: "fachada em concreto com brises de Aço Corten",

@@ -378,64 +378,94 @@
   }
 }
 
+/* ─────────────────────────────────────────
+   Efeito assinatura — papel → croqui a lápis (canvas) → obra
+   Fases em [data-phase]: paper · drawing · reveal · done
+   ───────────────────────────────────────── */
+
 .sig {
-  --draw: 100%;
-  --reveal: 108%;
-  --sketch-opacity: 0;
-  --front-opacity: 0;
+  --paper: #f7f5f0;
 }
 
 .sig__final {
   transform: scale(1.04);
-  transition: transform var(--dur-sig) var(--ease-out-expo);
+  transition:
+    transform var(--dur-sig) var(--ease-out-expo),
+    filter 2800ms var(--ease-soft) 200ms;
 }
 
-.sig.is-done .sig__final {
+/* Enquanto há só desenho, a foto espera por baixo como uma aguada:
+   sem cor, pouco contraste, clara e levemente desfocada */
+.sig[data-phase="paper"] .sig__final,
+.sig[data-phase="drawing"] .sig__final {
+  filter: grayscale(1) sepia(0.15) contrast(0.75) brightness(1.2) blur(1.5px);
+}
+
+.sig[data-phase="reveal"] .sig__final,
+.sig[data-phase="done"] .sig__final {
   transform: scale(1);
+  filter: none;
 }
 
-.sig__sketch {
-  opacity: var(--sketch-opacity);
-  filter: brightness(1.15) saturate(1.1);
-  -webkit-mask-image: linear-gradient(
-    to right,
-    #000 0 var(--draw),
-    transparent var(--draw)
-  );
-  mask-image: linear-gradient(
-    to right,
-    #000 0 var(--draw),
-    transparent var(--draw)
-  );
-}
-
-.sig[data-phase="2"] .sig__sketch {
-  -webkit-mask-image: linear-gradient(
-    to top,
-    transparent 0 var(--reveal),
-    rgb(0 0 0 / 0.5) calc(var(--reveal) + 9%),
-    #000 calc(var(--reveal) + 18%)
-  );
-  mask-image: linear-gradient(
-    to top,
-    transparent 0 var(--reveal),
-    rgb(0 0 0 / 0.5) calc(var(--reveal) + 9%),
-    #000 calc(var(--reveal) + 18%)
-  );
-}
-
-.sig__front {
+/* Papel: tom quente com grão leve, como folha de croqui */
+.sig__paper {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(
-    to top,
-    transparent calc(var(--reveal) - 4%),
-    var(--corten-glow) var(--reveal),
-    transparent calc(var(--reveal) + 10%)
-  );
-  mix-blend-mode: screen;
-  opacity: var(--front-opacity);
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  transition: opacity 2400ms var(--ease-in-out-q);
+}
+
+/* O lápis fica por cima da foto (multiply, como grafite sobre impressão)
+   e só se dissolve depois que a obra já tomou forma */
+.sig__croqui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: opacity 1800ms var(--ease-soft) 1100ms;
+}
+
+.sig__shade {
+  transition: opacity 2000ms var(--ease-soft) 1000ms;
+}
+
+.sig[data-phase="paper"] .sig__shade,
+.sig[data-phase="drawing"] .sig__shade {
+  opacity: 0;
+}
+
+.sig[data-phase="reveal"] .sig__paper,
+.sig[data-phase="reveal"] .sig__croqui {
+  opacity: 0;
+}
+
+.sig[data-phase="done"] .sig__paper,
+.sig[data-phase="done"] .sig__croqui {
+  display: none;
+}
+
+/* Título e metadados entram só quando a obra está pronta */
+.sig__ui {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path var(--dur-slow) var(--ease-out-expo);
+}
+
+.sig:not([data-phase="done"]) .sig__ui {
+  clip-path: inset(100% 0 0 0);
+}
+
+/* Header sobre o papel: a assinatura e o menu ficam escuros,
+   e voltam ao branco junto com a foto */
+header .on-photo {
+  transition: color 1200ms var(--ease-soft);
+}
+
+html[data-sig] header .on-photo {
+  --text: #0c0d0e;
+  --text-dim: #52555a;
+  --stroke: rgba(0, 0, 0, 0.12);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -444,8 +474,8 @@
     transition: none;
   }
 
-  .sig__sketch,
-  .sig__front {
+  .sig__paper,
+  .sig__croqui {
     display: none;
   }
 }

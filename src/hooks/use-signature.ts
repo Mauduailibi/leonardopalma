@@ -1,108 +1,95 @@
 import { useEffect, useRef, useState } from "react"
-import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
-type SignaturePhase = 0 | 1 | 2 | "done"
+export type SignaturePhase = "paper" | "drawing" | "reveal" | "done"
 
-function animateValue(
-  from: number,
-  to: number,
-  duration: number,
-  delay: number,
-  onTick: (value: number) => void,
-) {
-  return new Promise<void>((resolve) => {
-    const start = performance.now() + delay
-    const tick = (now: number) => {
-      const progress = Math.min(Math.max((now - start) / duration, 0), 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      onTick(from + (to - from) * eased)
-      if (progress < 1) requestAnimationFrame(tick)
-      else resolve()
-    }
-    requestAnimationFrame(tick)
-  })
+/* Janela em que os traços começam; a obra começa a surgir antes do último
+   traço (REVEAL_AT do span), para o desenho nunca parar e esperar */
+const DRAW_SPAN_DESKTOP = 2.6
+const DRAW_SPAN_MOBILE = 1.9
+const REVEAL_AT = 0.85
+const REVEAL_MS = 3000
+const PAPER_MS = 600
+
+/** Janela (s) em que os traços do croqui começam */
+export function signatureSpan() {
+  return window.matchMedia("(max-width: 1023px)").matches ? DRAW_SPAN_MOBILE : DRAW_SPAN_DESKTOP
 }
 
-function sessionKey(slug: string) {
-  return `sig:${slug}`
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
 }
 
-export function useSignature(slug: string, canPlay: boolean) {
-  const reduced = useReducedMotion()
+/**
+ * Efeito assinatura: papel em branco → croqui a lápis → a foto surge por baixo
+ * dos traços como uma aguada e ganha cor, enquanto o lápis se dissolve.
+ * As transições da revelação ficam no CSS ([data-phase="reveal"]).
+ */
+export function useSignature(enabled: boolean, ready: boolean) {
   const ref = useRef<HTMLDivElement>(null)
-  const [phase, setPhase] = useState<SignaturePhase>("done")
+  const [phase, setPhase] = useState<SignaturePhase>(() =>
+    enabled && !prefersReducedMotion() ? "paper" : "done",
+  )
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-
-    const skip =
-      reduced ||
-      !canPlay ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-      sessionStorage.getItem(sessionKey(slug)) === "1"
-
-    if (skip) {
+    if (!enabled || prefersReducedMotion()) {
       setPhase("done")
-      el.classList.add("is-done")
-      el.dataset.phase = "done"
       return
     }
-
-    setPhase(0)
-    el.classList.remove("is-done")
-    el.dataset.phase = "0"
-    el.style.setProperty("--draw", "0%")
-    el.style.setProperty("--reveal", "0%")
-    el.style.setProperty("--front-opacity", "0")
-    el.style.setProperty("--sketch-opacity", "1")
+    if (!ready) return
 
     let cancelled = false
+    const timers: number[] = []
+    const wait = (ms: number) =>
+      new Promise<void>((resolve) => timers.push(window.setTimeout(resolve, ms)))
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0]
+      ([entry]) => {
         if (!entry?.isIntersecting) return
         observer.disconnect()
         void play()
       },
       { threshold: 0.35 },
     )
-
     observer.observe(el)
 
     async function play() {
-      if (!el || cancelled) return
-      const mobile = window.matchMedia("(max-width: 1023px)").matches
-      const factor = mobile ? 2000 / 2800 : 1
+      if (!el) return
+      const span = signatureSpan()
 
-      setPhase(1)
-      el.dataset.phase = "1"
-      await animateValue(0, 100, 800 * factor, 200 * factor, (value) => {
-        el.style.setProperty("--draw", `${value}%`)
-      })
+      /* Um instante de papel em branco antes do primeiro traço */
+      await wait(PAPER_MS)
       if (cancelled) return
 
-      setPhase(2)
-      el.dataset.phase = "2"
-      el.style.setProperty("--front-opacity", "1")
-      await animateValue(0, 108, 1400 * factor, 0, (value) => {
-        el.style.setProperty("--reveal", `${value}%`)
-      })
+      setPhase("drawing")
+      await wait(span * REVEAL_AT * 1000)
       if (cancelled) return
 
-      el.style.setProperty("--front-opacity", "0")
-      el.style.setProperty("--sketch-opacity", "0")
-      el.classList.add("is-done")
-      el.dataset.phase = "done"
+      setPhase("reveal")
+      await wait(REVEAL_MS)
+      if (cancelled) return
+
       setPhase("done")
-      sessionStorage.setItem(sessionKey(slug), "1")
     }
 
     return () => {
       cancelled = true
       observer.disconnect()
+      timers.forEach(window.clearTimeout)
     }
-  }, [slug, canPlay, reduced])
+  }, [enabled, ready])
+
+  /* Avisa o header que há papel claro atrás dele (a assinatura branca sumiria).
+     Na revelação ele já volta ao branco, junto com a foto. */
+  useEffect(() => {
+    const root = document.documentElement
+    if (phase === "paper" || phase === "drawing") root.dataset.sig = phase
+    else delete root.dataset.sig
+    return () => {
+      delete root.dataset.sig
+    }
+  }, [phase])
 
   return { ref, phase }
 }
