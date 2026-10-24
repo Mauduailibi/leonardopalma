@@ -5,6 +5,7 @@ import { siteConfig } from "@/content/site"
 type SiteLogoProps = {
   className?: string
   size?: "nav" | "footer" | "mobile"
+  onClick?: () => void
 }
 
 const sizeClass = {
@@ -13,11 +14,12 @@ const sizeClass = {
   mobile: "text-[32px] leading-none",
 }
 
-export function SiteLogo({ className, size = "nav" }: SiteLogoProps) {
+export function SiteLogo({ className, size = "nav", onClick }: SiteLogoProps) {
   return (
     <Link
       to="/"
       aria-label={`${siteConfig.name} — início`}
+      onClick={onClick}
       className={cn(
         "font-script shrink-0 text-text",
         sizeClass[size],
