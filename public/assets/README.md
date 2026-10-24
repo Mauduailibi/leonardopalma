@@ -2,7 +2,9 @@
 
 Coloque as imagens nos caminhos abaixo. O site lê esses arquivos automaticamente — se o arquivo ainda não existir, a tela mostra o placeholder listrado do design.
 
-Formato atual: **JPEG**. Larguras: hero 2560px · galeria 1600px · card 800px.
+Formato atual: **WebP** (qualidade 80, sem metadados). Larguras máximas: hero 2400px · galeria 1600px · card 960×1200px (recorte 4:5 centralizado). Os originais em alta ficam em `portifolio/` (fora do Git).
+
+Exemplo de conversão: `cwebp -q 80 -m 6 -sharp_yuv -metadata none -resize 1600 0 original.jpg -o 01.webp`
 
 ## Marca — `/assets/brand`
 
@@ -15,20 +17,20 @@ Formato atual: **JPEG**. Larguras: hero 2560px · galeria 1600px · card 800px.
 
 | Arquivo | Uso no design |
 |---|---|
-| `hero.jpg` | Hero 16:9 — residência ao entardecer com luz quente interna |
-| `defines.jpg` | Seção “O que define nosso trabalho” — fachada com brises de Aço Corten |
-| `process.jpg` | Seção “Como trabalhamos” — residência noturna com piscina iluminada |
+| `hero.webp` | Hero 16:9 — residência ao entardecer com luz quente interna |
+| `defines.webp` | Seção “O que define nosso trabalho” — fachada com brises de Aço Corten |
+| `process.webp` | Seção “Como trabalhamos” — residência noturna com piscina iluminada |
 
 ## Páginas — `/assets/pages`
 
 ```
-casacor/hero.jpg
-escritorio/hero.jpg
-escritorio/team.jpg
-contato/map.jpg
-servicos/arquitetura.jpg
-servicos/interiores.jpg
-servicos/paisagismo.jpg
+casacor/hero.webp
+escritorio/hero.webp
+escritorio/team.webp
+contato/map.webp
+servicos/arquitetura.webp
+servicos/interiores.webp
+servicos/paisagismo.webp
 ```
 
 ## Projetos — `/assets/projects/<slug>`
@@ -37,10 +39,10 @@ Um diretório por projeto. Arquivos esperados:
 
 | Arquivo | Uso |
 |---|---|
-| `hero.jpg` | Imagem principal da página e carrossel da home |
-| `card.jpg` | Miniatura 4:5 (grid e card de vidro do hero) |
-| `croqui.jpg` | Croqui do efeito assinatura (página de projeto) |
-| `gallery/01.jpg` … | Galeria, numerada |
+| `hero.webp` | Imagem principal da página e carrossel da home |
+| `card.webp` | Miniatura 4:5 (grid e card de vidro do hero) |
+| `croqui.webp` | Croqui do efeito assinatura (página de projeto) |
+| `gallery/01.webp` … | Galeria, numerada |
 
 Slugs:
 

@@ -5,25 +5,25 @@ export const assetPaths = {
     portfolioPdf: "/assets/brand/portfolio.pdf",
   },
   home: {
-    hero: "/assets/home/hero.jpg",
-    defines: "/assets/home/defines.jpg",
-    process: "/assets/home/process.jpg",
+    hero: "/assets/home/hero.webp",
+    defines: "/assets/home/defines.webp",
+    process: "/assets/home/process.webp",
   },
   pages: {
     casacor: {
-      hero: "/assets/pages/casacor/hero.jpg",
+      hero: "/assets/pages/casacor/hero.webp",
     },
     escritorio: {
-      hero: "/assets/pages/escritorio/hero.jpg",
-      team: "/assets/pages/escritorio/team.jpg",
+      hero: "/assets/pages/escritorio/hero.webp",
+      team: "/assets/pages/escritorio/team.webp",
     },
     contato: {
-      map: "/assets/pages/contato/map.jpg",
+      map: "/assets/pages/contato/map.webp",
     },
     servicos: {
-      arquitetura: "/assets/pages/servicos/arquitetura.jpg",
-      interiores: "/assets/pages/servicos/interiores.jpg",
-      paisagismo: "/assets/pages/servicos/paisagismo.jpg",
+      arquitetura: "/assets/pages/servicos/arquitetura.webp",
+      interiores: "/assets/pages/servicos/interiores.webp",
+      paisagismo: "/assets/pages/servicos/paisagismo.webp",
     },
   },
 } as const
@@ -44,9 +44,9 @@ export type ProjectSlug =
 export function projectAssets(slug: ProjectSlug) {
   const base = `/assets/projects/${slug}`
   return {
-    hero: `${base}/hero.jpg`,
-    card: `${base}/card.jpg`,
-    croqui: `${base}/croqui.jpg`,
-    gallery: (index: number) => `${base}/gallery/${String(index).padStart(2, "0")}.jpg`,
+    hero: `${base}/hero.webp`,
+    card: `${base}/card.webp`,
+    croqui: `${base}/croqui.webp`,
+    gallery: (index: number) => `${base}/gallery/${String(index).padStart(2, "0")}.webp`,
   }
 }

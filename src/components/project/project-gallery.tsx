@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils"
 import { ImagePlaceholder } from "@/components/shared/image-placeholder"
 import { getProjectGallery, type getProject } from "@/content/projects"
 
@@ -47,14 +48,18 @@ export function ProjectGallery({ project }: ProjectGalleryProps) {
       ) : null}
 
       <section className="grid grid-cols-1 gap-6 px-margin pt-section lg:grid-cols-2">
-        {grid.map((item) => (
+        {grid.map((item, index) => (
           <ImagePlaceholder
             key={item.src}
             src={item.src}
             alt={item.alt}
             caption={item.caption}
             loading="lazy"
-            className="h-[620px] rounded-lg border border-stroke max-lg:h-[360px]"
+            className={cn(
+              "h-[620px] rounded-lg border border-stroke max-lg:h-[360px]",
+              /* Galerias com número ímpar na grade: a última imagem ocupa a linha toda */
+              grid.length % 2 === 1 && index === grid.length - 1 && "lg:col-span-2",
+            )}
             captionClassName="left-7 bottom-6 max-w-[76%] leading-[1.6]"
           />
         ))}

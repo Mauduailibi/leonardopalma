@@ -26,6 +26,7 @@ export type Project = {
   galleryCaptions: string[]
 }
 
+/* Máximo de imagens que o layout da galeria comporta (par · larga · grade de 4) */
 export const PROJECT_GALLERY_COUNT = 7
 
 export const categoryLabel: Record<ProjectCategory, string> = {
@@ -131,8 +132,7 @@ export const projects: Project[] = [
       "vista superior do living",
       "bar com letreiro neon “cheers”",
       "living com pé-direito duplo e escada",
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "vaso em cerâmica diante do painel vazado",
     ],
   },
   {
@@ -161,8 +161,8 @@ export const projects: Project[] = [
       "detalhe do volume em madeira",
       "fachada lateral com montanhas ao fundo",
       "vista da rua com a praia ao fundo",
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "fachada com palmeiras e volume branco",
+      "vista elevada da residência",
     ],
   },
   {
@@ -190,10 +190,10 @@ export const projects: Project[] = [
       "fachada com elementos verticais amarelos e azuis",
       "entrada com sinalização",
       "playground com módulos coloridos",
-      "vista aérea do conjunto",
+      "vista do conjunto a partir da rua",
       "área de contemplação arborizada",
       "quadra e piscina junto à praia",
-      extraGalleryCaption,
+      "crianças no playground com balanço",
     ],
   },
   {
@@ -230,9 +230,6 @@ export const projects: Project[] = [
       "fachada vista do lago",
       "hall com aquário embutido",
       "cozinha com ilha em pedra",
-      extraGalleryCaption,
-      extraGalleryCaption,
-      extraGalleryCaption,
     ],
   },
   {
@@ -259,9 +256,9 @@ export const projects: Project[] = [
       "closet com portas de vidro e home office",
       "vista do quarto com cabeceira retroiluminada",
       "detalhe da cabeceira em rocha natural",
-      extraGalleryCaption,
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "quarto com janela e cabeceira em rocha natural",
+      "home office e TV junto à cama",
+      "detalhe da cama com a cabeceira ao fundo",
     ],
   },
   {
@@ -290,8 +287,8 @@ export const projects: Project[] = [
       "marcenaria com nichos e palhinha",
       "poltrona junto à janela",
       "banheiro em tons rosados",
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "marcenaria com arco e área de brincar",
+      "cama com nicho circular e bichos de pelúcia",
     ],
   },
   {
@@ -320,8 +317,8 @@ export const projects: Project[] = [
       "cozinha com bancada em madeira",
       "vista integrada living/cozinha",
       "canto de leitura com poltrona",
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "living e jantar integrados com quadro de girafa",
+      "painel de TV com adega iluminada",
     ],
   },
   {
@@ -349,9 +346,8 @@ export const projects: Project[] = [
       "closet e penteadeira",
       "cabeceira com iluminação linear",
       "vista geral do quarto",
-      extraGalleryCaption,
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "quarto com painel de vidro e janela",
+      "penteadeira e marcenaria em brilho",
     ],
   },
   {
@@ -382,8 +378,8 @@ export const projects: Project[] = [
       "vista do jantar com pendentes",
       "cozinha em tons escuros",
       "detalhe do quadro e arandelas",
-      extraGalleryCaption,
-      extraGalleryCaption,
+      "estar com poltrona e mesa junto à janela",
+      "living com sofá e painel iluminado",
     ],
   },
 ]
@@ -498,7 +494,8 @@ export function getAdjacentProjects(slug: ProjectSlug) {
 
 export function getProjectGallery(slug: ProjectSlug) {
   const project = getProject(slug)
-  return Array.from({ length: PROJECT_GALLERY_COUNT }, (_, index) => {
+  const count = Math.min(project.galleryCaptions.length, PROJECT_GALLERY_COUNT)
+  return Array.from({ length: count }, (_, index) => {
     const caption = project.galleryCaptions[index] ?? extraGalleryCaption
     const pending = isLacuna(caption)
     return {
