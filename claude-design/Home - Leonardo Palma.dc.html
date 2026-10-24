@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&family=Style+Script&family=La+Belle+Aurore&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="width:1440px;margin:0 auto;background:#000000;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden">
+
+<!-- ══ 1 · HERO ══ -->
+<section data-screen-label="Hero" style="padding:24px 64px 0;position:relative">
+  <div style="position:relative;height:940px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#16171A 16px 32px)">
+    <div style="position:absolute;inset:0;background:radial-gradient(60% 50% at 74% 62%, rgba(240,178,122,0.14), rgba(0,0,0,0) 70%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 42%, rgba(0,0,0,0.55) 100%)"></div>
+    <span style="position:absolute;top:50%;left:56px;transform:translateY(-50%);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">imagem 16:9 · residência ao entardecer com luz quente interna · 2560px</span>
+
+    <!-- Navegação -->
+    <header style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 40px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:44px;line-height:1;color:#FFFFFF;flex:0 0 auto">Leonardo Palma</span>
+      <nav style="display:flex;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.10);border-radius:999px;background:rgba(0,0,0,0.24);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)">
+        <a href="#" style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:13px;font-weight:500">Projetos</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Escritório</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Serviços</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">CASACOR</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Contato</a>
+      </nav>
+      <a href="#" style="flex:0 0 auto;padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+    </header>
+
+    <!-- Título + apoio -->
+    <div style="position:absolute;left:56px;bottom:64px;width:760px;display:flex;flex-direction:column;gap:56px">
+      <h1 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:96px;letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF;text-wrap:pretty">Arquitetura, interiores e paisagismo de alto padrão</h1>
+      <div style="display:flex;align-items:center;gap:36px">
+        <a href="#" style="flex:0 0 auto;padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+        <p style="margin:0;max-width:42ch;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">Um escritório de arquitetura, interiores e paisagismo com design minimalista, que valoriza o talento local e projeta espaços onde o caos se transforma em harmonia.</p>
+      </div>
+    </div>
+
+    <!-- Cluster de vidro à direita -->
+    <div style="position:absolute;right:40px;bottom:64px;width:396px;display:flex;flex-direction:column;gap:16px">
+      <sc-if value="{{ showNumbers }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;gap:16px">
+          <div style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:24px;display:flex;flex-direction:column;gap:12px">
+            <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:60px;line-height:0.9;color:#FFFFFF">+30</span>
+            <span style="font-size:13px;line-height:1.5;color:#8E9095">artistas nacionais e internacionais</span>
+          </div>
+          <div style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:24px;display:flex;flex-direction:column;gap:12px">
+            <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:60px;line-height:0.9;color:#FFFFFF">2</span>
+            <span style="font-size:13px;line-height:1.5;color:#8E9095">anos de mercado até a CASACOR SC</span>
+            <sc-if value="{{ showLacunas }}" hint-placeholder-val="{{ true }}">
+              <span style="align-self:flex-start;padding:5px 9px;border:1px solid rgba(255,255,255,0.24);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">[Lacuna] atualizar</span>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- Mini-card de projeto em destaque -->
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:20px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;gap:16px">
+          <div style="flex:0 0 96px;height:120px;border-radius:16px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#101113 0 10px,#1B1C1F 10px 20px)"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Projeto em destaque</span>
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:24px;letter-spacing:-0.01em;line-height:1.2;color:#FFFFFF">Casa Sobre Trapézios</h3>
+            <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095">Casa elevada e jardim com sombreamento otimizado e baixa manutenção.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+          <div style="display:flex;gap:6px;flex:1;max-width:132px">
+            <span style="flex:1;height:2px;background:linear-gradient(to right,#B4522A 0 58%,rgba(255,255,255,0.10) 58%)"></span>
+            <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+            <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+            <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:16px" style-hover="background:#FFFFFF;color:#000000;border-color:#FFFFFF">←</span>
+            <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:16px" style-hover="background:#FFFFFF;color:#000000;border-color:#FFFFFF">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 2 · MANIFESTO ══ -->
+<section data-screen-label="Manifesto" style="padding:200px 64px 0;display:grid;grid-template-columns:1fr 380px;gap:120px;align-items:end">
+  <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:80px;letter-spacing:-0.03em;line-height:1.02;text-wrap:pretty"><span style="color:#FFFFFF">O espaço é a moldura,</span> <span style="color:#55575C">a vida é a obra</span></h2>
+  <div style="display:flex;flex-direction:column;gap:32px;padding-bottom:10px">
+    <p style="margin:0;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">Um escritório de arquitetura, interiores e paisagismo com design minimalista, que valoriza o talento local e projeta espaços onde o caos se transforma em harmonia.</p>
+    <a href="#" style="align-self:flex-start;padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Conheça o escritório</a>
+  </div>
+</section>
+
+<!-- ══ 3 · TRIO DE DISCIPLINAS ══ -->
+<section data-screen-label="Disciplinas" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:64px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:24px">
+    <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:52px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Três disciplinas, um projeto</h2>
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Arquitetura · Interiores · Paisagismo</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:24px;align-items:center">
+    <div style="background:#141517;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:32px;height:420px;display:flex;flex-direction:column;justify-content:space-between;transform:translateY(28px)" style-hover="background:#1C1E21;border-color:rgba(255,255,255,0.24);transform:translateY(22px)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:80px;line-height:0.9;color:#55575C">01</span>
+        <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:17px">↗</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Arquitetura</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">Residências que estabelecem relação natural com a paisagem e com o entorno, com soluções de conforto térmico e materiais de baixo impacto.</p>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:36px;height:480px;display:flex;flex-direction:column;justify-content:space-between">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:88px;line-height:0.9;color:rgba(0,0,0,0.28)">02</span>
+        <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(0,0,0,0.16);color:#000000;display:flex;align-items:center;justify-content:center;font-size:17px" style-hover="background:#000000;color:#FFFFFF;border-color:#000000">↗</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:30px;letter-spacing:-0.01em;line-height:1.2;color:#000000">Interiores</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#3A3C40;text-wrap:pretty">Ambientes onde cada detalhe é pensado para conforto, tranquilidade e sofisticação — do Art Déco contemporâneo ao aconchego da madeira.</p>
+      </div>
+    </div>
+    <div style="background:#141517;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:32px;height:420px;display:flex;flex-direction:column;justify-content:space-between;transform:translateY(-28px)" style-hover="background:#1C1E21;border-color:rgba(255,255,255,0.24);transform:translateY(-34px)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:80px;line-height:0.9;color:#55575C">03</span>
+        <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:17px">↗</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Paisagismo</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">Jardins projetados para alto índice de sombreamento e baixa manutenção, integrados ao projeto lumínico e aos arredores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 4 · O QUE DEFINE NOSSO TRABALHO ══ -->
+<section data-screen-label="O que define nosso trabalho" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px">
+  <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:52px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">O que define nosso trabalho</h2>
+  <div style="position:relative;height:700px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0B0C0D 0 16px,#15161A 16px 32px)">
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 60% at 68% 40%, rgba(240,178,122,0.10), rgba(0,0,0,0) 72%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.15) 55%)"></div>
+    <span style="position:absolute;top:32px;right:40px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">imagem larga · fachada com brises de Aço Corten</span>
+
+    <div style="position:absolute;top:48px;left:48px;display:flex;flex-direction:column;gap:0;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;width:210px">
+      <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.24);color:#FFFFFF"><span>01</span><span>Luz</span></div>
+      <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#55575C"><span>02</span><span>Material</span></div>
+      <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#55575C"><span>03</span><span>Paisagem</span></div>
+    </div>
+
+    <div style="position:absolute;left:48px;bottom:48px;width:620px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:32px;display:flex;flex-direction:column;gap:18px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">01 · Luz</span>
+      <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:32px;letter-spacing:-0.01em;line-height:1.2;color:#FFFFFF">A iluminação é a chave para realçar a modernidade</h3>
+      <p style="margin:0;max-width:56ch;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">A fachada é adornada com uma miríade de LEDs, proporcionando uma atmosfera acolhedora ao anoitecer e transformando a casa em uma verdadeira obra de arte luminosa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5 · PROJETOS EM DESTAQUE ══ -->
+<section data-screen-label="Projetos em destaque" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:56px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:24px">
+    <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:52px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Projetos em destaque</h2>
+    <a href="#" style="font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px" style-hover="border-color:#B4522A">Ver todos os projetos</a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:36px">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:88px;line-height:0.9;color:#55575C">01</span>
+      <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:68px;letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF;text-wrap:pretty">Casa Sobre Trapézios</h3>
+      <div style="display:flex;gap:56px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase">
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="color:#55575C">Ano</span><span style="color:#FFFFFF">[Lacuna]</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="color:#55575C">Local</span><span style="color:#FFFFFF">[Lacuna]</span></div>
+      </div>
+      <p style="margin:0;max-width:52ch;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">Pensada para ser um refúgio das regiões cosmopolitas, a Casa Sobre Trapézios ergue-se sobre prismas trapezoidais para criar um ambiente único e elevado do chão, estabelecendo uma relação natural com a paisagem e com as árvores do entorno.</p>
+      <div style="display:flex;gap:10px">
+        <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Arquitetura</span>
+        <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Paisagismo</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:32px">
+        <a href="#" style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500" style-hover="transform:scale(1.03)">Ver o projeto</a>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Coordenadas&nbsp;&nbsp;[Lacuna]</span>
+      </div>
+    </div>
+    <div style="position:relative;height:660px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0C0D0E 0 14px,#17181B 14px 28px)">
+      <div style="position:absolute;inset:0;background:radial-gradient(55% 45% at 50% 78%, rgba(240,178,122,0.12), rgba(0,0,0,0) 72%)"></div>
+      <span style="position:absolute;left:32px;bottom:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">imagem 3:2 · área de lazer com piscina ao entardecer</span>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:40px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px">
+    <div style="display:flex;gap:8px;flex:1;max-width:420px">
+      <span style="flex:1;height:2px;background:linear-gradient(to right,#B4522A 0 44%,rgba(255,255,255,0.10) 44%)"></span>
+      <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+      <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+      <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+      <span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span>
+    </div>
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">01/05</span>
+      <div style="display:flex;gap:8px">
+        <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:16px" style-hover="background:#FFFFFF;color:#000000;border-color:#FFFFFF">←</span>
+        <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:16px" style-hover="background:#FFFFFF;color:#000000;border-color:#FFFFFF">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6 · CASACOR ══ -->
+<section data-screen-label="CASACOR" style="margin-top:200px;background:#0A0B0C;padding:160px 64px">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="padding:10px 16px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:#FFFFFF">Casacor</span>
+        <sc-if value="{{ showLacunas }}" hint-placeholder-val="{{ true }}">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">[Lacuna] logo oficial · edição e ano</span>
+        </sc-if>
+      </div>
+      <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:68px;letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF;text-wrap:pretty">Harmonia do Caos — CASACOR Santa Catarina</h2>
+      <p style="margin:0;max-width:56ch;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">A exposição Harmonia do Caos na CASACOR SANTA CATARINA reúne mais de 30 artistas nacionais e internacionais e reflete os dois anos de aprendizado do escritório no mercado de arquitetura. Com um design minimalista, o espaço destaca as obras de arte, que dialogam entre si e com o público em um cenário que simula um labirinto. A curadoria plural explora diversas linguagens artísticas, valorizando o talento local.</p>
+      <p style="margin:0;max-width:56ch;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">Inspirado na música Bolero de Ravel, o projeto propõe um jogo entre equilíbrio e desequilíbrio, criando uma experiência imersiva e desconfortavelmente confortável, onde o caos se transforma em harmonia. A exposição abrange estilos como Pop Art e Abstracionismo, mostrando a convivência de contrastes e formas de maneira coesa além de uma seleção de móveis assinados por designers brasileiros.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(255,255,255,0.06);padding-top:24px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Assinatura do projeto</span>
+        <span style="font-size:15px;line-height:1.55;color:#FFFFFF">Leonardo Palma, Leonardo Vieira, Iuri Meinhard, Rafael Santos e Luciano Rother</span>
+      </div>
+      <a href="#" style="align-self:flex-start;padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Ver o projeto completo</a>
+    </div>
+    <div style="position:relative;height:780px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0D0E10 0 14px,#191A1D 14px 28px)">
+      <span style="position:absolute;left:32px;bottom:28px;max-width:70%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">imagem 4:5 · salão da exposição com bancos em suede e retratos de grande formato</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7 · ETAPAS ══ -->
+<section data-screen-label="Etapas do processo" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:32px">
+    <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:52px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Como trabalhamos</h2>
+    <sc-if value="{{ showLacunas }}" hint-placeholder-val="{{ true }}">
+      <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.24);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">[Lacuna] etapas do processo · conteúdo integral pendente</span>
+    </sc-if>
+  </div>
+  <div style="position:relative;height:820px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0A0B0C 0 16px,#141518 16px 32px)">
+    <div style="position:absolute;inset:0;background:radial-gradient(45% 40% at 30% 72%, rgba(240,178,122,0.14), rgba(0,0,0,0) 70%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.10) 60%)"></div>
+    <span style="position:absolute;top:32px;left:40px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">fotografia noturna full-bleed · residência com piscina iluminada</span>
+    <div style="position:absolute;left:48px;right:48px;bottom:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:end">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:28px;display:flex;flex-direction:column;gap:16px;transform:translateY(-36px)">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:0.9;color:#55575C">01</span>
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">[Lacuna] etapa 01</h3>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095">Descrição a ser fornecida pelo escritório.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:28px;display:flex;flex-direction:column;gap:16px;transform:translateY(-8px)">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:0.9;color:#55575C">02</span>
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">[Lacuna] etapa 02</h3>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095">Descrição a ser fornecida pelo escritório.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:28px;display:flex;flex-direction:column;gap:16px;transform:translateY(-24px)">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:0.9;color:#55575C">03</span>
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">[Lacuna] etapa 03</h3>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095">Descrição a ser fornecida pelo escritório.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:28px;display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:0.9;color:#55575C">04</span>
+        <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">[Lacuna] etapa 04</h3>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095">Descrição a ser fornecida pelo escritório.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8 · CTA FINAL + RODAPÉ ══ -->
+<section data-screen-label="CTA final" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px;align-items:flex-start">
+  <h2 style="margin:0;max-width:20ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:96px;letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF;text-wrap:pretty">Vamos projetar o seu espaço</h2>
+  <div style="display:flex;align-items:center;gap:36px">
+    <a href="#" style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+    <a href="#" style="padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Baixar o portfólio</a>
+    <sc-if value="{{ showLacunas }}" hint-placeholder-val="{{ true }}">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">[Lacuna] texto curto sobre o processo</span>
+    </sc-if>
+  </div>
+</section>
+
+<footer data-screen-label="Rodapé" style="margin-top:160px;padding:96px 64px 40px;display:flex;flex-direction:column;gap:96px">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:64px;border-top:1px solid rgba(255,255,255,0.10);padding-top:64px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:72px;line-height:1;color:#FFFFFF">Leonardo Palma</span>
+      <span style="font-size:15px;color:#8E9095;letter-spacing:0.18em">arquitetura interiores e paisagismo</span>
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Balneário Camboriú · Santa Catarina</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Navegação</span>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Projetos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Escritório</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Serviços</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">CASACOR</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Contato</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Projetos</span>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Sobre Trapézios</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Z</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Escola Atlântica</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Lumberjack</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Contato</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] e-mail</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] telefone / WhatsApp</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] endereço do escritório</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] Instagram</span>
+      <a href="#" style="margin-top:8px;font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px;align-self:flex-start" style-hover="border-color:#B4522A">Baixar o portfólio</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;gap:32px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+    <span>© Leonardo Palma</span>
+    <div style="display:flex;gap:40px">
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Política de Privacidade</a>
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Crédito de desenvolvimento</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;scriptFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mrs Saint Delafield&quot;,&quot;Style Script&quot;,&quot;La Belle Aurore&quot;],&quot;default&quot;:&quot;Mrs Saint Delafield&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marca&quot;},&quot;showLacunas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;showNumbers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      scriptFont: `'${this.props.scriptFont ?? 'Mrs Saint Delafield'}'`,
+      showLacunas: this.props.showLacunas ?? true,
+      showNumbers: this.props.showNumbers ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

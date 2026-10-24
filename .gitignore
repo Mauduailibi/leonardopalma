@@ -1,0 +1,72 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build output
+dist
+dist-ssr
+build
+coverage
+*.tsbuildinfo
+.vite
+.cache
+.parcel-cache
+.eslintcache
+.oxlint-cache
+.stylelintcache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Deploy platforms
+.vercel
+.netlify
+.wrangler
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Design export thumbnails
+claude-design/.thumbnail
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

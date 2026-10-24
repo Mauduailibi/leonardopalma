@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+
+  @property --draw   { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+  @property --reveal { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+  /* fase 1 → 3 · o croqui entra por varredura horizontal e sai por varredura vertical */
+  .sig-sketch {
+    -webkit-mask-image: linear-gradient(to right, #000 0 var(--draw), transparent var(--draw));
+            mask-image: linear-gradient(to right, #000 0 var(--draw), transparent var(--draw));
+    animation: sig-draw 800ms cubic-bezier(0.16,1,0.3,1) 200ms both,
+               sig-clear 1400ms cubic-bezier(0.16,1,0.3,1) 1000ms both;
+  }
+  @keyframes sig-draw { from { --draw: 0%; } to { --draw: 100%; } }
+  @keyframes sig-clear {
+    from {
+      --reveal: 0%;
+      -webkit-mask-image: linear-gradient(to top, transparent 0 0%, rgba(0,0,0,.5) 9%, #000 18%);
+              mask-image: linear-gradient(to top, transparent 0 0%, rgba(0,0,0,.5) 9%, #000 18%);
+    }
+    to {
+      --reveal: 100%;
+      -webkit-mask-image: linear-gradient(to top, transparent 0 100%, rgba(0,0,0,.5) 109%, #000 118%);
+              mask-image: linear-gradient(to top, transparent 0 100%, rgba(0,0,0,.5) 109%, #000 118%);
+    }
+  }
+
+  /* a frente de revelação — brilho quente que acompanha a varredura */
+  .sig-front {
+    background: linear-gradient(to top,
+      transparent calc(var(--reveal) - 4%),
+      rgba(180,82,42,0.28) var(--reveal),
+      transparent calc(var(--reveal) + 10%));
+    mix-blend-mode: screen;
+    animation: sig-front 1400ms cubic-bezier(0.16,1,0.3,1) 1000ms both;
+  }
+  @keyframes sig-front {
+    0%   { --reveal: 0%;   opacity: 0; }
+    12%  { opacity: 1; }
+    88%  { opacity: 1; }
+    100% { --reveal: 100%; opacity: 0; }
+  }
+
+  .sig-final { transform: scale(1.04); animation: sig-settle 2800ms cubic-bezier(0.16,1,0.3,1) both; }
+  @keyframes sig-settle { to { transform: scale(1); } }
+
+  .sig-haze { animation: sig-haze 700ms cubic-bezier(0.33,1,0.68,1) both; }
+  @keyframes sig-haze { 0% { opacity: 1; } 100% { opacity: 0.35; } }
+
+  .sig-caption { animation: sig-caption 400ms cubic-bezier(0.16,1,0.3,1) 2400ms both; }
+  @keyframes sig-caption {
+    from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(12px); }
+    to   { opacity: 1; clip-path: inset(0 0 0 0);    transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sig-sketch { animation: none; opacity: 0; }
+    .sig-front  { animation: none; opacity: 0; }
+    .sig-final  { animation: none; transform: none; }
+    .sig-haze   { animation: none; opacity: 0.35; }
+    .sig-caption{ animation: none; opacity: 1; clip-path: none; transform: none; }
+  }
+</style>
+</helmet>
+
+<div style="width:1640px;margin:0 auto;background:#000000;padding:48px 64px 120px;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased">
+<div style="display:flex;flex-direction:column;gap:96px">
+
+  <!-- CABEÇALHO -->
+  <header style="display:flex;flex-direction:column;gap:24px;border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:28px">
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Prancha 02 · efeito assinatura · seção 8 do design system</span>
+    <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-end">
+      <h1 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:80px;letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF">Traço → Obra</h1>
+      <div style="display:flex;gap:40px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+        <span>Duração total 2800ms</span>
+        <span>Uma vez por sessão e por projeto</span>
+      </div>
+    </div>
+    <p style="margin:0;max-width:70ch;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">A imagem principal de cada página de projeto chega como croqui em linha e se constrói até a fotografia final. Duas camadas em enquadramento idêntico: a imagem final embaixo, carregada com prioridade, e o croqui em cima — o que se anima é a remoção do croqui.</p>
+  </header>
+
+  <!-- SEQUÊNCIA DAS QUATRO FASES -->
+  <section style="display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;gap:24px;align-items:baseline">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:64px;line-height:0.9;color:#55575C">01</span>
+      <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">As quatro fases</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+
+      <!-- FASE 0 -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#000000">
+          <div style="position:absolute;inset:0;background:radial-gradient(46% 40% at 52% 58%, rgba(240,178,122,0.10), rgba(0,0,0,0) 70%)"></div>
+          <span style="position:absolute;top:16px;left:18px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">0 ms</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Fase 0 · Prancha</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">0 → 200 ms</span>
+          <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095;text-wrap:pretty">Quadro praticamente preto. Só uma leve névoa quente onde a imagem vai nascer.</p>
+        </div>
+      </div>
+
+      <!-- FASE 1 -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#000000">
+          <div style="position:absolute;inset:0;background:radial-gradient(46% 40% at 52% 58%, rgba(240,178,122,0.08), rgba(0,0,0,0) 70%)"></div>
+          <!-- croqui em Corten, revelado a 70% -->
+          <div style="position:absolute;inset:0;filter:brightness(1.15) saturate(1.1);-webkit-mask-image:linear-gradient(to right,#000 0 70%,transparent 70%);mask-image:linear-gradient(to right,#000 0 70%,transparent 70%)">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,rgba(180,82,42,0.55) 0 1px,rgba(0,0,0,0) 1px 18px)"></div>
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(180,82,42,0.28) 0 1px,rgba(0,0,0,0) 1px 44px)"></div>
+            <div style="position:absolute;left:0;right:0;top:58%;height:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:22%;top:20%;bottom:24%;width:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:64%;top:14%;bottom:0;width:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:22%;right:16%;top:20%;height:1px;background:#B4522A"></div>
+          </div>
+          <!-- borda da varredura -->
+          <div style="position:absolute;top:0;bottom:0;left:70%;width:1px;background:#B4522A;box-shadow:0 0 24px 6px rgba(180,82,42,0.28)"></div>
+          <span style="position:absolute;top:16px;left:18px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">≈ 760 ms · 70%</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Fase 1 · Traço</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">200 → 1000 ms</span>
+          <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095;text-wrap:pretty">O croqui em linha aparece por máscara horizontal da esquerda para a direita. Linhas em Corten, brightness 1,15.</p>
+        </div>
+      </div>
+
+      <!-- FASE 2 -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#000000">
+          <!-- fotografia final -->
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,#0C0D0E 0 14px,#17181B 14px 28px)"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(50% 44% at 58% 62%, rgba(240,178,122,0.13), rgba(0,0,0,0) 72%)"></div>
+          <!-- croqui remanescente acima da frente -->
+          <div style="position:absolute;inset:0;filter:brightness(1.15) saturate(1.1);-webkit-mask-image:linear-gradient(to top,transparent 0 46%,rgba(0,0,0,.5) 55%,#000 64%);mask-image:linear-gradient(to top,transparent 0 46%,rgba(0,0,0,.5) 55%,#000 64%)">
+            <div style="position:absolute;inset:0;background:#000000"></div>
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,rgba(180,82,42,0.55) 0 1px,rgba(0,0,0,0) 1px 18px)"></div>
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(180,82,42,0.28) 0 1px,rgba(0,0,0,0) 1px 44px)"></div>
+            <div style="position:absolute;left:0;right:0;top:58%;height:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:22%;top:20%;bottom:24%;width:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:64%;top:14%;bottom:0;width:1px;background:#B4522A"></div>
+            <div style="position:absolute;left:22%;right:16%;top:20%;height:1px;background:#B4522A"></div>
+          </div>
+          <!-- frente de revelação -->
+          <div style="position:absolute;inset:0;mix-blend-mode:screen;background:linear-gradient(to top,transparent 42%,rgba(180,82,42,0.28) 46%,transparent 56%)"></div>
+          <span style="position:absolute;top:16px;left:18px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">≈ 1650 ms · 46%</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Fase 2 · Materialização</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">1000 → 2400 ms</span>
+          <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095;text-wrap:pretty">Uma frente de borda suave (≈18% de largura) varre de baixo para cima. Abaixo, a fotografia em cor e nitidez; acima, ainda o croqui. A frente carrega um brilho quente.</p>
+        </div>
+      </div>
+
+      <!-- FASE 3 -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#000000">
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,#0C0D0E 0 14px,#17181B 14px 28px)"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(52% 46% at 60% 60%, rgba(240,178,122,0.13), rgba(0,0,0,0) 72%)"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.80), rgba(0,0,0,0) 55%)"></div>
+          <div style="position:absolute;left:18px;right:18px;bottom:16px;display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'Mrs Saint Delafield',cursive;font-size:22px;line-height:1.3;color:#FFFFFF">“Luxo e requinte em cada detalhe”</span>
+            <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:28px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Z</span>
+          </div>
+          <span style="position:absolute;top:16px;left:18px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">2800 ms</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Fase 3 · Assentamento</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">2400 → 2800 ms</span>
+          <p style="margin:0;font-size:13px;line-height:1.5;color:#8E9095;text-wrap:pretty">Escala 1,04 → 1,00. Nome do projeto e frase-conceito entram por máscara; ficha técnica em stagger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINHA DO TEMPO -->
+  <section style="display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;gap:24px;align-items:baseline">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:64px;line-height:0.9;color:#55575C">02</span>
+      <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Linha do tempo</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,0.24);padding-top:28px">
+      <!-- barras proporcionais: 200 / 800 / 1400 / 400 de 2800ms -->
+      <div style="display:grid;grid-template-columns:200fr 800fr 1400fr 400fr;gap:4px">
+        <div style="height:8px;border-radius:2px;background:rgba(255,255,255,0.10)"></div>
+        <div style="height:8px;border-radius:2px;background:rgba(255,255,255,0.24)"></div>
+        <div style="height:8px;border-radius:2px;background:#FFFFFF"></div>
+        <div style="height:8px;border-radius:2px;background:rgba(255,255,255,0.24)"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:200fr 800fr 1400fr 400fr;gap:4px;padding-top:20px">
+        <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.24);padding-left:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">0 → 200</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Fase 0 · Prancha</span>
+          <span style="font-size:13px;line-height:1.5;color:#8E9095">--ease-soft<br>cubic-bezier(0.33, 1, 0.68, 1)</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.24);padding-left:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">200 → 1000</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Fase 1 · Traço · 800ms</span>
+          <span style="font-size:13px;line-height:1.5;color:#8E9095">--ease-out-expo<br>cubic-bezier(0.16, 1, 0.3, 1)</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.24);padding-left:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">1000 → 2400</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Fase 2 · Materialização · 1400ms</span>
+          <span style="font-size:13px;line-height:1.5;color:#8E9095">--ease-out-expo<br>cubic-bezier(0.16, 1, 0.3, 1)</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.24);padding-left:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">2400 → 2800</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Fase 3 · Assentamento · 400ms</span>
+          <span style="font-size:13px;line-height:1.5;color:#8E9095">--ease-out-expo · escala 1,04 → 1,00<br>legenda por clip-path</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:40px;border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+      <span>--dur-sig&nbsp;&nbsp;2800ms</span>
+      <span>--draw&nbsp;&nbsp;0% → 100%</span>
+      <span>--reveal&nbsp;&nbsp;0% → 100%</span>
+      <span>frente&nbsp;&nbsp;≈18% de borda suave</span>
+      <span style="color:#8E9095">prefers-reduced-motion → salta direto para a fase 3</span>
+    </div>
+  </section>
+
+  <!-- VERSÃO ANIMADA -->
+  <section style="display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;gap:24px;align-items:baseline">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:64px;line-height:0.9;color:#55575C">03</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Versão animada</h2>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">mask-image em CSS · fase 1 → 3 · recarregue a página para rever</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start">
+      <div style="position:relative;aspect-ratio:16/10;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#000000;isolation:isolate">
+        <!-- camada de baixo · fotografia final -->
+        <div class="sig-final" style="position:absolute;inset:0">
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#17181B 16px 32px)"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(52% 46% at 60% 60%, rgba(240,178,122,0.13), rgba(0,0,0,0) 72%)"></div>
+        </div>
+        <!-- névoa quente da fase 0 -->
+        <div class="sig-haze" style="position:absolute;inset:0;background:radial-gradient(46% 40% at 52% 58%, rgba(240,178,122,0.10), rgba(0,0,0,0) 70%)"></div>
+        <!-- camada de cima · croqui em Corten -->
+        <div class="sig-sketch" style="position:absolute;inset:0;filter:brightness(1.15) saturate(1.1)">
+          <div style="position:absolute;inset:0;background:#000000"></div>
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(112deg,rgba(180,82,42,0.55) 0 1px,rgba(0,0,0,0) 1px 20px)"></div>
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(180,82,42,0.28) 0 1px,rgba(0,0,0,0) 1px 48px)"></div>
+          <div style="position:absolute;left:0;right:0;top:58%;height:1px;background:#B4522A"></div>
+          <div style="position:absolute;left:22%;top:20%;bottom:24%;width:1px;background:#B4522A"></div>
+          <div style="position:absolute;left:64%;top:14%;bottom:0;width:1px;background:#B4522A"></div>
+          <div style="position:absolute;left:22%;right:16%;top:20%;height:1px;background:#B4522A"></div>
+        </div>
+        <!-- frente de revelação -->
+        <div class="sig-front" style="position:absolute;inset:0;pointer-events:none"></div>
+        <!-- assentamento -->
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 52%);pointer-events:none"></div>
+        <div class="sig-caption" style="position:absolute;left:32px;right:32px;bottom:28px;display:flex;flex-direction:column;gap:8px">
+          <span style="font-family:'Mrs Saint Delafield',cursive;font-size:38px;line-height:1.3;color:#FFFFFF">“Luxo e requinte em cada detalhe desta reforma sofisticada”</span>
+          <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Z</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p style="margin:0;max-width:52ch;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">A imagem final é a camada de baixo, carregada com prioridade — ela é o elemento de LCP. O croqui fica em cima e o que se anima é a remoção dele: primeiro a varredura horizontal que o desenha, depois a varredura vertical de borda suave que o apaga.</p>
+        <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.24)">
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#55575C">Camadas</span><span style="color:#FFFFFF">final · croqui · frente</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#55575C">Técnica</span><span style="color:#FFFFFF">mask-image + @property</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#55575C">Blend</span><span style="color:#FFFFFF">screen na frente</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#55575C">Enquadramento</span><span style="color:#FFFFFF">idêntico nas duas camadas</span></div>
+        </div>
+        <p style="margin:0;max-width:52ch;font-size:13px;line-height:1.5;color:#55575C;text-wrap:pretty">Aqui o croqui e a fotografia são placeholders de linha e trama. Com o croqui e o render reais em enquadramento idêntico, a mecânica é a mesma sem alteração de código.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

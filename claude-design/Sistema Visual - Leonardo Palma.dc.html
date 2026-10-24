@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&family=Style+Script&family=La+Belle+Aurore&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="background:#000000;min-height:100vh;padding:clamp(28px,4vw,64px) clamp(20px,4vw,64px) 160px;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased">
+<div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(72px,9vw,140px)">
+
+  <!-- CABEÇALHO DA PRANCHA -->
+  <header style="display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:28px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Prancha 01 · Sistema visual · para aprovação</span>
+        <h1 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(2.5rem,5.5vw,5rem);letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF">Leonardo Palma</h1>
+        <span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095;letter-spacing:0.18em">arquitetura interiores e paisagismo</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;text-align:right;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+        <span>Balneário Camboriú · SC</span>
+        <span>26.9906° S&nbsp;&nbsp;48.6350° W</span>
+        <span style="color:#8E9095">Sem telas · sem layout</span>
+      </div>
+    </div>
+    <p style="margin:0;max-width:62ch;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">O site é uma sala escura. A arquitetura é a única coisa iluminada. A interface é feita de linhas de 1px, tipografia clara e cartões de vidro — e some quando a imagem entra.</p>
+  </header>
+
+  <!-- 01 · PALETA -->
+  <section style="display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.10);padding-top:24px">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#55575C">01</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Paleta</h2>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Seção 2 · dezesseis variáveis</span>
+      </div>
+    </div>
+
+    <!-- Proporção alvo -->
+    <div style="display:flex;flex-direction:column;gap:16px;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Proporção alvo em qualquer tela</span>
+      <div style="display:flex;height:56px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;overflow:hidden">
+        <div style="box-sizing:border-box;flex:0 0 90%;min-width:0;background:linear-gradient(90deg,#000000 0%,#0A0B0C 45%,#141517 78%,#1C1E21 100%);display:flex;align-items:center;padding-left:16px;overflow:hidden;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">90% preto e cinzas</div>
+        <div style="box-sizing:border-box;flex:0 0 9%;min-width:0;background:#FFFFFF;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#000000">9%</div>
+        <div style="box-sizing:border-box;flex:0 0 1%;min-width:0;background:#B4522A"></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:28px;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">
+        <span>90% · preto, carbono, grafite</span>
+        <span>9% · branco (texto e um cartão invertido por seção)</span>
+        <span>1% · Corten (foco, sublinhado, filete do slide ativo)</span>
+      </div>
+    </div>
+
+    <!-- Base -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Base</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--void</span><span style="color:#55575C">#000000</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Fundo global. Toda página, do hero ao rodapé.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#0A0B0C"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--carbon</span><span style="color:#55575C">#0A0B0C</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Seções que precisam de separação sutil do fundo — CASACOR, rodapé.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#141517"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--graphite</span><span style="color:#55575C">#141517</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Superfície de cartão: trio 01/02/03, cartões de dados, ficha técnica.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#1C1E21"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--graphite-hi</span><span style="color:#55575C">#1C1E21</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Cartão em hover, junto com a subida de 6px.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Traço -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Traço</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;align-items:center;justify-content:center"><div style="width:76%;height:52px;border:1px solid rgba(255,255,255,0.10);border-radius:8px"></div></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--stroke</span><span style="color:#55575C">255/0.10</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Borda padrão de todo cartão e toda imagem. É o que dá leitura de camadas sobre preto.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;align-items:center;justify-content:center"><div style="width:76%;height:52px;border:1px solid rgba(255,255,255,0.24);border-radius:8px"></div></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--stroke-hi</span><span style="color:#55575C">255/0.24</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">A mesma borda acesa em hover e em foco.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 24px">
+            <div style="height:1px;background:rgba(255,255,255,0.06)"></div>
+            <div style="height:1px;background:rgba(255,255,255,0.06)"></div>
+            <div style="height:1px;background:rgba(255,255,255,0.06)"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--rule</span><span style="color:#55575C">255/0.06</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Divisores de lista numerada e de ficha técnica.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Texto e inversão -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Texto e inversão</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;align-items:center;justify-content:center;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:44px;letter-spacing:-0.03em;color:#FFFFFF">Aa</div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--text</span><span style="color:#55575C">#FFFFFF</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Títulos, palavras acesas do SplitTone, nome de projeto.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;align-items:center;justify-content:center;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:44px;letter-spacing:-0.03em;color:#8E9095">Aa</div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--text-dim</span><span style="color:#55575C">#8E9095</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Corpo de texto. 7:1 sobre preto — único tom permitido em leitura longa.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#000000;display:flex;align-items:center;justify-content:center;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:44px;letter-spacing:-0.03em;color:#55575C">Aa</div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--text-mute</span><span style="color:#55575C">#55575C</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Numeração, metadados, palavras apagadas do SplitTone. 3,4:1 — só decorativo.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:44px;letter-spacing:-0.03em;color:#000000">Aa</div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--invert-bg / --invert-text</span><span style="color:#55575C">#FFF / #000</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Botão primário e um único cartão de destaque por seção. Nunca fundo de seção.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acento -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Acento — Aço Corten · 1% da tela</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#B4522A"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--corten</span><span style="color:#55575C">#B4522A</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Só em três lugares: anel de foco do teclado, sublinhado de link, filete do slide ativo. Mais o traço do croqui no efeito assinatura.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:#F0B27A"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--ember</span><span style="color:#55575C">#F0B27A</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Gradiente de halo atrás do hero e brilho do cursor. Nunca em texto.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);background:radial-gradient(120% 140% at 50% 100%, rgba(180,82,42,0.28), #000000 70%)"></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--corten-glow</span><span style="color:#55575C">180 82 42 / 0.28</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">A frente de revelação do efeito Traço → Obra, em mix-blend screen.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="height:104px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);background:repeating-linear-gradient(115deg,#101112 0 10px,#191A1C 10px 20px);display:flex;align-items:center;justify-content:center">
+            <div style="width:70%;height:56px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%)"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--glass / --glass-stroke</span><span style="color:#55575C">255/0.06 · 255/0.14</span></div>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Cartão de vidro com blur de 20px. Apenas sobre fotografia — nunca sobre preto chapado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · TIPOGRAFIA -->
+  <section style="display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.10);padding-top:24px">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#55575C">02</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Tipografia</h2>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Seção 3 · quatro papéis</span>
+      </div>
+    </div>
+
+    <!-- Os quatro papéis -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;background:#141517;display:flex;flex-direction:column;gap:18px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Display</span>
+        <div style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;letter-spacing:-0.03em;line-height:1;color:#FFFFFF">Aa</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;color:#FFFFFF">Outfit 200 / 300</span>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Somente ≥ 40px. Nunca bold, nunca em caixa alta. Tracking de −0,02em a −0,035em.</p>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;background:#141517;display:flex;flex-direction:column;gap:18px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Corpo</span>
+        <div style="font-family:'Inter Tight',system-ui,sans-serif;font-weight:400;font-size:56px;line-height:1;color:#FFFFFF">Aa</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;color:#FFFFFF">Inter Tight 400 / 500</span>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">15–17px, altura de linha 1,55, em --text-dim. Nunca justificado.</p>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;background:#141517;display:flex;flex-direction:column;gap:18px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Utilitário</span>
+        <div style="font-family:'Geist Mono',ui-monospace,monospace;font-weight:500;font-size:56px;line-height:1;color:#FFFFFF">Aa</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;color:#FFFFFF">Geist Mono 500</span>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">11px, caixa alta, tracking +0,14em. Numeração, coordenadas, ano, área, escopo, contadores.</p>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;background:#141517;display:flex;flex-direction:column;gap:18px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Manuscrita · assinatura</span>
+        <div style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:64px;line-height:1;color:#FFFFFF">Leonardo</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;color:#FFFFFF">Substituta provisória</span>
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">A fonte do portfólio ainda não foi enviada. Dois lugares e nada além: o logotipo (em SVG) e a frase-conceito de cada projeto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Escala completa -->
+    <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,0.10)">
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-hero</span><span style="color:#55575C">52 → 120px · 200 · −0.035em · lh 0.94</span></div>
+        <div style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3.25rem,8vw,7.5rem);letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF">Leonardo Palma</div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-display</span><span style="color:#55575C">40 → 80px · 200 · −0.03em · lh 1.02</span></div>
+        <div style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(2.5rem,5.5vw,5rem);letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF">Vamos projetar o seu espaço</div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-h2</span><span style="color:#55575C">32 → 52px · 300 · −0.02em · lh 1.1</span></div>
+        <div style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Sobre Trapézios</div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-h3</span><span style="color:#55575C">20 → 26px · 300 · −0.01em · lh 1.25</span></div>
+        <div style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Brises deslizantes verticais de Aço Corten</div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-body-lg</span><span style="color:#55575C">17px · 400 · lh 1.55</span></div>
+        <p style="margin:0;max-width:62ch;font-family:'Inter Tight',system-ui,sans-serif;font-weight:400;font-size:17px;line-height:1.55;color:#8E9095;text-wrap:pretty">Pensada para ser um refúgio das regiões cosmopolitas, a Casa Sobre Trapézios ergue-se sobre prismas trapezoidais para criar um ambiente único e elevado do chão, estabelecendo uma relação natural com a paisagem e com as árvores do entorno.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-body</span><span style="color:#55575C">15px · 400 · lh 1.55</span></div>
+        <p style="margin:0;max-width:62ch;font-family:'Inter Tight',system-ui,sans-serif;font-weight:400;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">O jardim, projetado para ter um alto índice de sombreamento e pouca queda de folhas durante o ano, proporciona um ambiente integrado com os arredores e une o projeto lumínico, tornando a relação natural e artificial mais íntima e completa.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-small</span><span style="color:#55575C">13px · 400 · lh 1.5</span></div>
+        <p style="margin:0;max-width:62ch;font-family:'Inter Tight',system-ui,sans-serif;font-weight:400;font-size:13px;line-height:1.5;color:#8E9095">Legenda de imagem: fachada em contra-plongée com jardim mediterrâneo em primeiro plano.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-numeral</span><span style="color:#55575C">48 → 88px · 200 · --text-mute</span></div>
+        <div style="display:flex;gap:36px;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:1;color:#55575C"><span>01</span><span>02</span><span>03</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-script</span><span style="color:#55575C">24 → 40px · manuscrita · lh 1.35</span></div>
+        <div style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.35;color:#FFFFFF">“O espaço é a moldura, a vida é a obra”</div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:32px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);align-items:baseline">
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--t-mono</span><span style="color:#55575C">11px · 500 · +0.14em · caixa alta</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095"><span>Arquitetura + Paisagismo</span><span>2024</span><span>55 m²</span><span>01/05</span></div>
+      </div>
+    </div>
+
+    <!-- SplitTone -->
+    <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:32px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Recurso SplitTone · ênfase por tom</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">--text-mute → --text por progresso de scroll</span>
+      </div>
+      <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(2.5rem,5.5vw,5rem);letter-spacing:-0.03em;line-height:1.02;max-width:24ch;text-wrap:pretty"><span style="color:#55575C">Arquitetura, interiores</span> <span style="color:#FFFFFF">e paisagismo</span> <span style="color:#55575C">em Balneário Camboriú</span></h3>
+      <p style="margin:0;max-width:62ch;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095">O título entra inteiro em --text-mute e as palavras acendem para branco palavra por palavra, amarradas ao progresso de scroll da seção. Aqui está congelado no meio do movimento.</p>
+    </div>
+  </section>
+
+  <!-- 03 · COMPONENTES -->
+  <section style="display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.10);padding-top:24px">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#55575C">03</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Componentes</h2>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Seção 5 · estado padrão à esquerda, hover à direita</span>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.1 · Navegação em pílula</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Item ativo desliza entre os itens</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Padrão · sobre o hero</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:20px;display:flex;justify-content:center;background:#000000;min-width:0">
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.10);border-radius:999px;max-width:100%">
+              <span style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;font-weight:500">Projetos</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Escritório</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Serviços</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">CASACOR</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Contato</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Hover em “Serviços” · após 80px de scroll</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:20px;display:flex;justify-content:center;background:rgba(0,0,0,0.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);min-width:0">
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.24);border-radius:999px;max-width:100%">
+              <span style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;font-weight:500">Projetos</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Escritório</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#FFFFFF;background:rgba(255,255,255,0.04);font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Serviços</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">CASACOR</span>
+              <span style="padding:10px 20px;border-radius:999px;color:#8E9095;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px">Contato</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.2 · Botões</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Corten só no sublinhado do botão de texto e no anel de foco</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Padrão</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+            <span style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;font-weight:500">Iniciar um projeto</span>
+            <span style="padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px">Baixar o portfólio</span>
+            <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px">↗</span>
+            <span style="color:#FFFFFF;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px">Ver o projeto</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Hover · e o último em foco de teclado</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+            <span style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;font-weight:500;transform:scale(1.03) translateX(6px);display:inline-block">Iniciar um projeto</span>
+            <span style="padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px">Baixar o portfólio</span>
+            <span style="width:44px;height:44px;border-radius:8px;background:#FFFFFF;border:1px solid #FFFFFF;color:#000000;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px">↗</span>
+            <span style="color:#FFFFFF;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;border-bottom:1px solid #B4522A;padding-bottom:3px;outline:2px solid #B4522A;outline-offset:2px;border-radius:2px">Ver o projeto</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">
+        <p style="margin:0">Primário: escala 1,03 com atração magnética ao cursor de no máximo 6px.</p>
+        <p style="margin:0">Secundário: borda vai a --stroke-hi, fundo a 255/0,04.</p>
+        <p style="margin:0">Seta: inverte preto↔branco; a seta sai e outra entra por baixo.</p>
+        <p style="margin:0">Texto: o sublinhado varre da esquerda em Corten. Anel de foco de 2px, offset 2px.</p>
+      </div>
+    </div>
+
+    <!-- Chips -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.3 · Chips de metadado</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Estáticos, exceto na barra de filtros</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Padrão</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:10px">
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Arquitetura</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Paisagismo</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Exposições</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Filtro ativo invertido · hover no segundo</span>
+          <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:10px">
+            <span style="padding:8px 14px;border:1px solid #FFFFFF;background:#FFFFFF;border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#000000">Interiores</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Arquitetura</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Paisagismo</span>
+            <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Exposições</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartão de valor -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.4 · Cartão de valor numerado</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Um branco invertido por trio · Interiores</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Escuro · padrão</span>
+          <div style="background:#141517;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#55575C">01</span>
+              <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:17px">↗</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Arquitetura</h3>
+              <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">Residências que estabelecem relação natural com a paisagem e com o entorno, com soluções de conforto térmico e materiais de baixo impacto.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Escuro · hover · sobe 6px, borda acesa</span>
+          <div style="background:#1C1E21;border:1px solid rgba(255,255,255,0.24);border-radius:16px;padding:28px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;transform:translateY(-6px)">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#8E9095;transform:translateY(8px);display:inline-block">01</span>
+              <span style="width:44px;height:44px;border-radius:8px;background:#FFFFFF;border:1px solid #FFFFFF;color:#000000;display:flex;align-items:center;justify-content:center;font-size:17px">↗</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Arquitetura</h3>
+              <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095;text-wrap:pretty">Residências que estabelecem relação natural com a paisagem e com o entorno, com soluções de conforto térmico e materiais de baixo impacto.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Invertido · padrão e hover idênticos, sem elevação</span>
+          <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:28px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:rgba(0,0,0,0.28)">02</span>
+              <span style="width:44px;height:44px;border-radius:8px;border:1px solid rgba(0,0,0,0.16);color:#000000;display:flex;align-items:center;justify-content:center;font-size:17px">↗</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#000000">Interiores</h3>
+              <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#3A3C40;text-wrap:pretty">Ambientes onde cada detalhe é pensado para conforto, tranquilidade e sofisticação — do Art Déco contemporâneo ao aconchego da madeira.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartão de projeto -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.5 · Cartão de projeto</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">4:5 no grid · sem overlay escuro permanente</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Padrão</span>
+          <div style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(115deg,#0E0F10 0 12px,#17181A 12px 24px)">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.75), transparent 55%)"></div>
+            <span style="position:absolute;top:20px;left:20px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores</span>
+            <span style="position:absolute;top:50%;left:0;right:0;text-align:center;transform:translateY(-50%);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">imagem 4:5 do projeto</span>
+            <div style="position:absolute;left:20px;right:20px;bottom:20px">
+              <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Casa Z</h3>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Hover · zoom 1,05 · conceito + cursor</span>
+          <div style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.24);overflow:hidden;background:#000000">
+            <div style="position:absolute;inset:0;transform:scale(1.05);background:repeating-linear-gradient(115deg,#131416 0 12px,#1E2023 12px 24px)"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.75), transparent 55%)"></div>
+            <span style="position:absolute;top:20px;left:20px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Interiores</span>
+            <div style="position:absolute;top:44%;left:50%;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:#FFFFFF;color:#000000;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;font-weight:500">Ver projeto</div>
+            <div style="position:absolute;left:20px;right:20px;bottom:20px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:26px;line-height:1.35;color:#FFFFFF">“Luxo e requinte em cada detalhe”</span>
+              <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Casa Z</h3>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;justify-content:flex-end">
+          <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">A imagem escala 1,05 em 900ms com --ease-out-expo, a frase-conceito manuscrita entra em fade sobre a base e o cursor customizado de 64px acompanha o ponteiro com o rótulo “Ver projeto”. Gradiente de contraste apenas na base, nunca overlay chapado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista numerada -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.7 · Linha de lista numerada</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Segunda linha em hover</span>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+          <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:1;color:#55575C">01</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Escuta e briefing</h3>
+            <p style="margin:0;max-width:58ch;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095">Levantamento do terreno, do programa e do modo de morar antes de qualquer traço.</p>
+          </div>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Etapa</span>
+        </div>
+        <div style="position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;padding:28px 0;transform:translateX(12px)">
+          <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:1;color:#FFFFFF">02</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Estudo preliminar</h3>
+            <p style="margin:0;max-width:58ch;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095">Implantação, volumetria e as primeiras decisões de conforto térmico e orientação solar.</p>
+          </div>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.24);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Etapa</span>
+          <div style="position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(to right,#B4522A 0%,#B4522A 62%,rgba(255,255,255,0.06) 62%)"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+          <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:56px;line-height:1;color:#55575C">03</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(1.25rem,2vw,1.625rem);letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Projeto executivo</h3>
+            <p style="margin:0;max-width:58ch;font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;line-height:1.55;color:#8E9095">Detalhamento de marcenaria, iluminação direta e indireta e especificação de materiais.</p>
+          </div>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Etapa</span>
+        </div>
+      </div>
+      <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Hover: a linha desloca 12px para a direita, o numeral acende de --text-mute para --text e o separador inferior varre em Corten da esquerda para a direita — congelado aqui a 62%.</p>
+    </div>
+
+    <!-- Vidro sobre fotografia -->
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.8 · Cartão de vidro sobre fotografia</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Parallax 0.92 · 1.00 · 1.08 · máx. 4 na tela</span>
+      </div>
+      <div style="position:relative;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;min-height:420px;background:repeating-linear-gradient(115deg,#0D0E0F 0 14px,#191A1D 14px 28px);display:flex;align-items:flex-end;padding:clamp(20px,3vw,40px)">
+        <span style="position:absolute;top:24px;left:24px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">fotografia full-bleed · casa breeze ao anoitecer</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;width:100%">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:24px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">01 · Padrão</span>
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Escuta e briefing</h3>
+            <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Terreno, programa e modo de morar.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.24);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:24px;display:flex;flex-direction:column;gap:14px;transform:translateY(-6px)">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">02 · Hover</span>
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Estudo preliminar</h3>
+            <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Volumetria e orientação solar.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:24px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:24px;display:flex;flex-direction:column;gap:14px">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">03 · Padrão</span>
+            <h3 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.25;color:#FFFFFF">Projeto executivo</h3>
+            <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Marcenaria, luz e materiais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dados técnicos + formulário -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">5.9 · Bloco de dados técnicos</span>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.24);padding-top:20px;display:flex;flex-direction:column;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase">
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="color:#55575C">Ano</span><span style="color:#FFFFFF">2024</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="color:#55575C">Local</span><span style="color:#FFFFFF">Balneário Camboriú, SC</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="color:#55575C">Área</span><span style="color:#FFFFFF">55 m²</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="color:#55575C">Escopo</span><span style="color:#FFFFFF">Interiores</span></div>
+          <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0"><span style="color:#55575C">Coordenadas</span><span style="color:#FFFFFF">26.9906° S&nbsp;&nbsp;48.6350° W</span></div>
+        </div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Sem hover — é informação, não controle. Projetos sem endereço definido omitem a linha de coordenadas em vez de inventar.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px">
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Campo de formulário</span>
+          <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Sem caixa preenchida</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:36px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Nome · padrão</span>
+            <div style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px;color:#55575C">Seu nome completo</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Hover · borda a --stroke-hi</span>
+            <div style="border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:12px;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px;color:#8E9095">Seu e-mail</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Foco · borda inferior acende em Corten</span>
+            <div style="border-bottom:1px solid #B4522A;padding-bottom:12px;font-family:'Inter Tight',system-ui,sans-serif;font-size:17px;color:#FFFFFF">Casa em Balneário Camboriú, 320 m²<span style="color:#B4522A">|</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · FORMA -->
+  <section style="display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;gap:24px;align-items:baseline;border-top:1px solid rgba(255,255,255,0.10);padding-top:24px">
+      <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:clamp(3rem,6vw,5.5rem);line-height:0.9;color:#55575C">04</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Forma</h2>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Seção 4 · raio, borda, vidro</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="height:120px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;background:#141517"></div>
+        <div style="display:flex;justify-content:space-between;gap:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--r-sm</span><span style="color:#55575C">8px</span></div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Chips e botão de seta.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="height:120px;border:1px solid rgba(255,255,255,0.10);border-radius:16px;background:#141517"></div>
+        <div style="display:flex;justify-content:space-between;gap:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--r-md</span><span style="color:#55575C">16px</span></div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Cartões de valor e de dados.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="height:120px;border:1px solid rgba(255,255,255,0.10);border-radius:24px;background:#141517"></div>
+        <div style="display:flex;justify-content:space-between;gap:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--r-lg</span><span style="color:#55575C">24px</span></div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Imagens, cartões de vidro.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="height:120px;border:1px solid rgba(255,255,255,0.10);border-radius:32px;background:#141517"></div>
+        <div style="display:flex;justify-content:space-between;gap:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--r-xl</span><span style="color:#55575C">32px</span></div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Containers de seção com imagem.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="height:120px;border:1px solid rgba(255,255,255,0.10);border-radius:999px;background:#141517"></div>
+        <div style="display:flex;justify-content:space-between;gap:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase"><span style="color:#FFFFFF">--r-pill</span><span style="color:#55575C">999px</span></div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Nav e botão primário.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Borda de 1px · regra única</span>
+        <div style="display:flex;gap:16px">
+          <div style="flex:1;height:110px;border-radius:16px;background:#141517"></div>
+          <div style="flex:1;height:110px;border-radius:16px;background:#141517;border:1px solid rgba(255,255,255,0.10)"></div>
+        </div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Sem borda, o cartão desaparece no preto. Com 1px em 255/0,10, ele passa a ser um objeto. Toda superfície e toda imagem levam esse filete — inclusive as full-bleed, que recebem margem lateral em vez de encostar na borda da tela.</p>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Vidro · blur 20px, saturate 120%</span>
+        <div style="position:relative;height:110px;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(115deg,#0D0E0F 0 12px,#1B1C1F 12px 24px);display:flex;align-items:center;justify-content:center">
+          <div style="width:70%;height:64px;border-radius:16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5)"></div>
+        </div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Só sobre fotografia. Sobre preto chapado não há nada para desfocar e o vidro vira um retângulo cinza sem sentido. Sombra existe apenas aqui: 0 8px 40px rgba(0,0,0,0.5).</p>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,0.10);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Onde o Corten pode aparecer</span>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:28px;border-radius:8px;outline:2px solid #B4522A;outline-offset:2px;border:1px solid rgba(255,255,255,0.10)"></span><span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;color:#8E9095">Anel de foco do teclado</span></div>
+          <div style="display:flex;align-items:center;gap:14px"><span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:15px;color:#FFFFFF;border-bottom:1px solid #B4522A;padding-bottom:2px">Ver o projeto</span><span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;color:#8E9095">Sublinhado de link</span></div>
+          <div style="display:flex;align-items:center;gap:14px"><span style="display:flex;gap:6px;width:120px"><span style="flex:1;height:2px;background:linear-gradient(to right,#B4522A 0 64%,rgba(255,255,255,0.10) 64%)"></span><span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span><span style="flex:1;height:2px;background:rgba(255,255,255,0.10)"></span></span><span style="font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;color:#8E9095">Filete do slide ativo</span></div>
+        </div>
+        <p style="margin:0;font-family:'Inter Tight',system-ui,sans-serif;font-size:13px;line-height:1.5;color:#8E9095">Nunca em botões, ícones ou fundos. Fora destes três lugares, só no traço do croqui do efeito assinatura.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.10);padding-top:28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end">
+    <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:40px;color:#FFFFFF">Leonardo Palma</span>
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Prancha 01 · aprovar antes do layout</span>
+  </footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scriptFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mrs Saint Delafield&quot;,&quot;Style Script&quot;,&quot;La Belle Aurore&quot;],&quot;default&quot;:&quot;Mrs Saint Delafield&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Manuscrita&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { scriptFont: `'${this.props.scriptFont ?? 'Mrs Saint Delafield'}'` };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&family=Style+Script&family=La+Belle+Aurore&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="width:1440px;margin:0 auto;background:#000000;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden">
+
+<!-- ══ NAV ══ -->
+<header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 64px">
+  <a href="Home - Leonardo Palma.dc.html" style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:44px;line-height:1;color:#FFFFFF;flex:0 0 auto">Leonardo Palma</a>
+  <nav style="display:flex;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.10);border-radius:999px">
+    <a href="#" style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:13px;font-weight:500">Projetos</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Escritório</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Serviços</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">CASACOR</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Contato</a>
+  </nav>
+  <a href="#" style="flex:0 0 auto;padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+</header>
+
+<!-- ══ CABEÇALHO ══ -->
+<section data-screen-label="Cabeçalho" style="padding:120px 64px 0;display:grid;grid-template-columns:1fr 380px;gap:120px;align-items:end">
+  <h1 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:96px;letter-spacing:-0.035em;line-height:0.94;text-wrap:pretty"><span style="color:#FFFFFF">Projetos</span> <span style="color:#55575C">de arquitetura, interiores e paisagismo</span></h1>
+  <p style="margin:0;font-size:17px;line-height:1.55;color:#8E9095;padding-bottom:12px;text-wrap:pretty">Casas, apartamentos, suítes e projetos institucionais assinados por Leonardo Palma.</p>
+</section>
+
+<!-- ══ FILTROS ══ -->
+<section data-screen-label="Filtros" style="padding:80px 64px 0">
+  <div style="display:flex;flex-wrap:wrap;gap:10px;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:32px">
+    <span style="padding:8px 14px;border:1px solid #FFFFFF;background:#FFFFFF;border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#000000">Todos</span>
+    <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Arquitetura</span>
+    <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Interiores</span>
+    <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Paisagismo</span>
+    <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Exposições</span>
+    <span style="margin-left:auto;align-self:center;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">11 projetos</span>
+  </div>
+</section>
+
+<!-- ══ GRID ASSIMÉTRICO ══ -->
+<section data-screen-label="Grid de projetos" style="padding:56px 64px 0;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+
+  <!-- 01 · largo -->
+  <a href="#" style="grid-column:span 2;position:relative;aspect-ratio:16/9;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#16171A 16px 32px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 46% at 62% 60%, rgba(240,178,122,0.12), rgba(0,0,0,0) 72%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Arquitetura + Paisagismo</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Sobre Trapézios</h2>
+  </a>
+
+  <!-- 02 · vertical -->
+  <a href="Projeto Casa Z - Leonardo Palma.dc.html" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0B0C0D 0 14px,#15161A 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores (reforma)</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Z</h2>
+  </a>
+
+  <!-- 03 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0D0E10 0 14px,#191A1D 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Exposição / Efêmero</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Harmonia do Caos</h2>
+  </a>
+
+  <!-- 04 · largo · ESTADO HOVER -->
+  <a href="#" style="grid-column:span 2;position:relative;aspect-ratio:16/9;border-radius:24px;border:1px solid rgba(255,255,255,0.24);overflow:hidden;display:block;background:#000000;cursor:none">
+    <div style="position:absolute;inset:0;transform:scale(1.05);background:repeating-linear-gradient(112deg,#101113 0 16px,#1C1D21 16px 32px)"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(48% 44% at 40% 62%, rgba(240,178,122,0.12), rgba(0,0,0,0) 72%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.80), rgba(0,0,0,0) 58%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#FFFFFF">Institucional / Educacional</span>
+    <div style="position:absolute;left:28px;bottom:26px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:42px;line-height:1.35;color:#FFFFFF">“Cada ambiente estimula a criatividade e os sentidos”</span>
+      <h2 style="margin:0;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Escola Atlântica</h2>
+    </div>
+    <div style="position:absolute;top:44%;left:58%;display:flex;align-items:center;justify-content:center;width:112px;height:112px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:13px;font-weight:500;white-space:nowrap">Ver projeto</div>
+    <span style="position:absolute;top:24px;right:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">estado hover</span>
+  </a>
+
+  <!-- 05 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0A0B0C 0 14px,#141518 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Arquitetura (casa de campo)</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Casa Lumberjack</h2>
+  </a>
+
+  <!-- 06 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0C0D0E 0 14px,#17181B 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Apartamento Savanna</h2>
+  </a>
+
+  <!-- 07 · largo -->
+  <a href="#" style="grid-column:span 2;position:relative;aspect-ratio:16/9;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0B0C0D 0 16px,#15161A 16px 32px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:radial-gradient(46% 44% at 54% 64%, rgba(240,178,122,0.11), rgba(0,0,0,0) 72%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Arquitetura + Paisagismo</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF">Casa Breeze</h2>
+  </a>
+
+  <!-- 08 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0D0E10 0 14px,#191A1D 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores · 55 m²</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Loft Bear Cave</h2>
+  </a>
+
+  <!-- 09 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0A0B0C 0 14px,#141518 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Suíte Nogueira</h2>
+  </a>
+
+  <!-- 10 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0C0D0E 0 14px,#17181B 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Suíte Maple</h2>
+  </a>
+
+  <!-- 11 · vertical -->
+  <a href="#" style="position:relative;aspect-ratio:4/5;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;display:block;background:repeating-linear-gradient(112deg,#0B0C0D 0 14px,#16171A 14px 28px)" style-hover="border-color:rgba(255,255,255,0.24)">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0) 55%)"></div>
+    <span style="position:absolute;top:24px;left:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Interiores / Infantil</span>
+    <h2 style="margin:0;position:absolute;left:28px;bottom:26px;max-width:80%;font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em;line-height:1.1;color:#FFFFFF;text-wrap:pretty">Suíte Wonderland</h2>
+  </a>
+
+</section>
+
+<!-- ══ CTA + RODAPÉ ══ -->
+<section data-screen-label="CTA final" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px;align-items:flex-start">
+  <h2 style="margin:0;max-width:20ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:96px;letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF;text-wrap:pretty">Vamos projetar o seu espaço</h2>
+  <div style="display:flex;align-items:center;gap:36px">
+    <a href="#" style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+    <a href="#" style="padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px;white-space:nowrap" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Baixar o portfólio</a>
+  </div>
+</section>
+
+<footer data-screen-label="Rodapé" style="margin-top:160px;padding:96px 64px 40px;display:flex;flex-direction:column;gap:96px">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:64px;border-top:1px solid rgba(255,255,255,0.10);padding-top:64px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:72px;line-height:1;color:#FFFFFF">Leonardo Palma</span>
+      <span style="font-size:15px;color:#8E9095;letter-spacing:0.18em">arquitetura interiores e paisagismo</span>
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Balneário Camboriú · Santa Catarina</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Navegação</span>
+      <a href="Home - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Início</a>
+      <a href="#" style="font-size:15px;color:#FFFFFF">Projetos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Escritório</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Serviços</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">CASACOR</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Projetos</span>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Sobre Trapézios</a>
+      <a href="Projeto Casa Z - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Z</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Harmonia do Caos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Breeze</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Contato</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] e-mail</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] telefone / WhatsApp</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] endereço do escritório</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] Instagram</span>
+      <a href="#" style="margin-top:8px;font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px;align-self:flex-start" style-hover="border-color:#B4522A">Baixar o portfólio</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;gap:32px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+    <span>© Leonardo Palma</span>
+    <div style="display:flex;gap:40px">
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Política de Privacidade</a>
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Crédito de desenvolvimento</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;scriptFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mrs Saint Delafield&quot;,&quot;Style Script&quot;,&quot;La Belle Aurore&quot;],&quot;default&quot;:&quot;Mrs Saint Delafield&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { scriptFont: `'${this.props.scriptFont ?? 'Mrs Saint Delafield'}'` };
+  }
+}
+</script>
+</body>
+</html>

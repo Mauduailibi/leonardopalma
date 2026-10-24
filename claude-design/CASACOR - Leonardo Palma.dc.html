@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&family=Style+Script&family=La+Belle+Aurore&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="width:1440px;margin:0 auto;background:#000000;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden">
+
+<!-- ══ HERO ══ -->
+<section data-screen-label="Hero — Harmonia do Caos" style="padding:24px 64px 0;position:relative">
+  <div style="position:relative;height:900px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#16171A 16px 32px)">
+    <div style="position:absolute;inset:0;background:radial-gradient(56% 48% at 64% 56%, rgba(240,178,122,0.13), rgba(0,0,0,0) 72%)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.18) 48%, rgba(0,0,0,0.52) 100%)"></div>
+    <span style="position:absolute;top:50%;left:56px;transform:translateY(-50%);font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">imagem hero · salão da exposição com bancos em suede e retratos de grande formato</span>
+
+    <header style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 40px">
+      <a href="Home - Leonardo Palma.dc.html" style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:44px;line-height:1;color:#FFFFFF;flex:0 0 auto">Leonardo Palma</a>
+      <nav style="display:flex;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.10);border-radius:999px;background:rgba(0,0,0,0.24);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)">
+        <a href="Projetos - Leonardo Palma.dc.html" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Projetos</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Escritório</a>
+        <a href="Servicos - Leonardo Palma.dc.html" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Serviços</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:13px;font-weight:500">CASACOR</a>
+        <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Contato</a>
+      </nav>
+      <a href="#" style="flex:0 0 auto;padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+    </header>
+
+    <div style="position:absolute;left:56px;bottom:56px;display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;align-items:center;gap:20px">
+        <span style="padding:10px 16px;border:1px solid rgba(255,255,255,0.24);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:#FFFFFF">Casacor</span>
+        <span style="width:40px;height:1px;background:#B4522A"></span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Santa Catarina · [Lacuna] edição / ano</span>
+      </div>
+      <h1 style="margin:0;max-width:16ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:120px;letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF;text-wrap:pretty">Harmonia do Caos</h1>
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:48px;line-height:1.35;color:#FFFFFF">“O espaço é a moldura, a vida é a obra”</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DOIS PARÁGRAFOS EM COLUNAS ══ -->
+<section data-screen-label="Texto editorial" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:56px">
+  <div style="display:flex;align-items:center;gap:24px">
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B4522A">01</span>
+    <span style="flex:1;height:1px;background:linear-gradient(to right,#B4522A 0 9%,rgba(255,255,255,0.10) 9%)"></span>
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Exposição / Efêmero</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px">
+    <p style="margin:0;max-width:58ch;font-size:17px;line-height:1.55;color:#8E9095;text-align:left;text-wrap:pretty">A exposição Harmonia do Caos na CASACOR SANTA CATARINA reúne mais de 30 artistas nacionais e internacionais e reflete os dois anos de aprendizado do escritório no mercado de arquitetura. Com um design minimalista, o espaço destaca as obras de arte, que dialogam entre si e com o público em um cenário que simula um labirinto. A curadoria plural explora diversas linguagens artísticas, valorizando o talento local.</p>
+    <p style="margin:0;max-width:58ch;font-size:17px;line-height:1.55;color:#8E9095;text-align:left;text-wrap:pretty">Inspirado na música Bolero de Ravel, o projeto propõe um jogo entre equilíbrio e desequilíbrio, criando uma experiência imersiva e desconfortavelmente confortável, onde o caos se transforma em harmonia. A exposição abrange estilos como Pop Art e Abstracionismo, mostrando a convivência de contrastes e formas de maneira coesa além de uma seleção de móveis assinados por designers brasileiros.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid rgba(255,255,255,0.06);padding-top:36px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase">
+    <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #B4522A;padding-left:20px"><span style="color:#55575C">Artistas</span><span style="color:#FFFFFF">+30 nacionais e internacionais</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.10);padding-left:20px"><span style="color:#55575C">Referência</span><span style="color:#FFFFFF">Bolero de Ravel</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.10);padding-left:20px"><span style="color:#55575C">Estilos</span><span style="color:#FFFFFF">Pop Art · Abstracionismo</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid rgba(255,255,255,0.10);padding-left:20px"><span style="color:#55575C">Período · endereço</span><span style="color:#8E9095">[Lacuna]</span></div>
+  </div>
+</section>
+
+<!-- ══ ASSINATURA ══ -->
+<section data-screen-label="Assinatura do projeto" style="padding:200px 64px 0">
+  <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center;border-top:1px solid rgba(255,255,255,0.10);padding-top:80px">
+    <div style="position:relative;height:640px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0E0F10 0 14px,#1A1B1E 14px 28px);filter:grayscale(1)">
+      <span style="position:absolute;left:28px;bottom:24px;max-width:76%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">retrato da equipe · cinco pessoas · preto e branco</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;align-items:center;gap:24px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B4522A">02</span>
+        <span style="flex:1;height:1px;background:rgba(255,255,255,0.10)"></span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Assinatura do projeto</span>
+      </div>
+      <h2 style="margin:0;max-width:22ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:68px;letter-spacing:-0.03em;line-height:1.02;color:#FFFFFF;text-wrap:pretty">Cinco autores, um espaço</h2>
+      <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.24)">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;color:#B4522A">01</span><span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;color:#FFFFFF">Leonardo Palma</span></div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;color:#55575C">02</span><span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;color:#FFFFFF">Leonardo Vieira</span></div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;color:#55575C">03</span><span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;color:#FFFFFF">Iuri Meinhard</span></div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;color:#55575C">04</span><span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;color:#FFFFFF">Rafael Santos</span></div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;padding:20px 0"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;color:#55575C">05</span><span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:26px;letter-spacing:-0.01em;color:#FFFFFF">Luciano Rother</span></div>
+      </div>
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Crédito fotográfico · [Lacuna]</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALERIA IRREGULAR ══ -->
+<section data-screen-label="Galeria da exposição" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;align-items:center;gap:24px">
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B4522A">03</span>
+    <span style="flex:1;height:1px;background:rgba(255,255,255,0.10)"></span>
+    <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Galeria completa · 7 imagens</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px">
+    <div style="grid-column:span 4;position:relative;height:620px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#17181B 16px 32px)">
+      <div style="position:absolute;inset:0;background:radial-gradient(48% 46% at 52% 44%, rgba(240,178,122,0.12), rgba(0,0,0,0) 72%)"></div>
+      <span style="position:absolute;left:28px;bottom:24px;max-width:76%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">mural colorido com pessoas em movimento na escadaria</span>
+    </div>
+    <div style="grid-column:span 2;position:relative;height:620px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0E0F10 0 14px,#1A1B1E 14px 28px);filter:grayscale(1)">
+      <span style="position:absolute;left:28px;bottom:24px;max-width:76%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">retrato do arquiteto</span>
+    </div>
+
+    <div style="grid-column:span 2;position:relative;height:520px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0D0E10 0 14px,#191A1D 14px 28px)">
+      <div style="position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 60%, rgba(240,178,122,0.10), rgba(0,0,0,0) 74%)"></div>
+      <span style="position:absolute;left:28px;bottom:24px;max-width:80%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">poltrona laranja com mesas laterais</span>
+    </div>
+    <div style="grid-column:span 2;position:relative;height:520px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0A0B0C 0 14px,#141518 14px 28px);margin-top:56px">
+      <span style="position:absolute;left:28px;bottom:24px;max-width:80%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">detalhe de banco e mesa lateral</span>
+    </div>
+    <div style="grid-column:span 2;position:relative;height:520px;border-radius:24px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0B0C0D 0 14px,#16171A 14px 28px)">
+      <span style="position:absolute;left:28px;bottom:24px;max-width:80%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">poltrona escultórica clara</span>
+    </div>
+
+    <div style="grid-column:span 3;position:relative;height:560px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0C0D0E 0 16px,#18191C 16px 32px)">
+      <div style="position:absolute;inset:0;background:radial-gradient(52% 48% at 46% 56%, rgba(240,178,122,0.11), rgba(0,0,0,0) 72%)"></div>
+      <span style="position:absolute;left:28px;bottom:24px;max-width:78%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">salão da exposição com retratos de grande formato</span>
+    </div>
+    <div style="grid-column:span 3;position:relative;height:560px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:repeating-linear-gradient(112deg,#0A0B0C 0 16px,#15161A 16px 32px);filter:grayscale(1)">
+      <span style="position:absolute;left:28px;bottom:24px;max-width:78%;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;line-height:1.6">retrato da equipe · cinco pessoas · preto e branco</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA + RODAPÉ ══ -->
+<section data-screen-label="CTA final" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:48px;align-items:flex-start">
+  <h2 style="margin:0;max-width:20ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:96px;letter-spacing:-0.035em;line-height:0.94;color:#FFFFFF;text-wrap:pretty">Vamos projetar o seu espaço</h2>
+  <div style="display:flex;align-items:center;gap:36px">
+    <a href="#" style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+    <a href="#" style="padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px;white-space:nowrap" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Baixar o portfólio</a>
+  </div>
+</section>
+
+<footer data-screen-label="Rodapé" style="margin-top:160px;padding:96px 64px 40px;display:flex;flex-direction:column;gap:96px">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:64px;border-top:1px solid rgba(255,255,255,0.10);padding-top:64px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:72px;line-height:1;color:#FFFFFF">Leonardo Palma</span>
+      <span style="font-size:15px;color:#8E9095;letter-spacing:0.18em">arquitetura interiores e paisagismo</span>
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Balneário Camboriú · Santa Catarina</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Navegação</span>
+      <a href="Home - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Início</a>
+      <a href="Projetos - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Projetos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Escritório</a>
+      <a href="Servicos - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Serviços</a>
+      <a href="#" style="font-size:15px;color:#FFFFFF">CASACOR</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Projetos</span>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Sobre Trapézios</a>
+      <a href="Projeto Casa Z - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Z</a>
+      <a href="#" style="font-size:15px;color:#FFFFFF">Harmonia do Caos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Breeze</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Contato</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] e-mail</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] telefone / WhatsApp</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] endereço do escritório</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] Instagram</span>
+      <a href="#" style="margin-top:8px;font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px;align-self:flex-start" style-hover="border-color:#B4522A">Baixar o portfólio</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;gap:32px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+    <span>© Leonardo Palma</span>
+    <div style="display:flex;gap:40px">
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Política de Privacidade</a>
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Crédito de desenvolvimento</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;scriptFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mrs Saint Delafield&quot;,&quot;Style Script&quot;,&quot;La Belle Aurore&quot;],&quot;default&quot;:&quot;Mrs Saint Delafield&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { scriptFont: `'${this.props.scriptFont ?? 'Mrs Saint Delafield'}'` };
+  }
+}
+</script>
+</body>
+</html>

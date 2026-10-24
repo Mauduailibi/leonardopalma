@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter+Tight:wght@400;500&family=Geist+Mono:wght@400;500&family=Mrs+Saint+Delafield&family=Style+Script&family=La+Belle+Aurore&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000000; }
+  a { color: #FFFFFF; text-decoration: none; }
+  a:hover { color: #FFFFFF; }
+  ::selection { background: rgba(180,82,42,0.35); color: #FFFFFF; }
+</style>
+</helmet>
+
+<div style="width:1440px;margin:0 auto;background:#000000;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden">
+
+<header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 64px">
+  <a href="Home - Leonardo Palma.dc.html" style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:44px;line-height:1;color:#FFFFFF;flex:0 0 auto">Leonardo Palma</a>
+  <nav style="display:flex;gap:4px;padding:6px;border:1px solid rgba(255,255,255,0.10);border-radius:999px">
+    <a href="Projetos - Leonardo Palma.dc.html" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Projetos</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Escritório</a>
+    <a href="Servicos - Leonardo Palma.dc.html" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">Serviços</a>
+    <a href="CASACOR - Leonardo Palma.dc.html" style="padding:10px 20px;border-radius:999px;color:#8E9095;font-size:13px" style-hover="color:#FFFFFF;background:rgba(255,255,255,0.04)">CASACOR</a>
+    <a href="#" style="padding:10px 20px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:13px;font-weight:500">Contato</a>
+  </nav>
+  <a href="#" style="flex:0 0 auto;padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Iniciar um projeto</a>
+</header>
+
+<!-- ══ TÍTULO ══ -->
+<section data-screen-label="Título" style="padding:120px 64px 0">
+  <h1 style="margin:0;max-width:26ch;font-family:'Outfit',system-ui,sans-serif;font-weight:200;font-size:120px;letter-spacing:-0.035em;line-height:0.94;text-wrap:pretty"><span style="color:#FFFFFF">Vamos projetar</span> <span style="color:#55575C">o seu espaço</span></h1>
+</section>
+
+<!-- ══ FORMULÁRIO + COLUNA LATERAL ══ -->
+<section data-screen-label="Formulário de briefing" style="padding:160px 64px 0;display:grid;grid-template-columns:1fr 380px;gap:120px;align-items:start">
+
+  <form style="display:flex;flex-direction:column;gap:64px">
+    <div style="display:flex;align-items:center;gap:24px;border-top:1px solid rgba(255,255,255,0.24);padding-top:20px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Briefing do projeto</span>
+      <span style="margin-left:auto;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">09 campos</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px 48px">
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Nome</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">Seu nome completo</span>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">E-mail</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">nome@email.com</span>
+      </label>
+
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Telefone / WhatsApp</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">(00) 00000-0000</span>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Cidade</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">Balneário Camboriú</span>
+      </label>
+
+      <div style="grid-column:span 2;display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Tipo de projeto</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="padding:8px 14px;border:1px solid #FFFFFF;background:#FFFFFF;border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#000000">Arquitetura</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Interiores</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Paisagismo</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Projeto completo</span>
+        </div>
+      </div>
+
+      <div style="grid-column:span 2;display:flex;flex-direction:column;gap:16px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Tipo de imóvel</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Casa</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Apartamento</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Comercial</span>
+          <span style="padding:8px 14px;border:1px solid rgba(255,255,255,0.10);border-radius:8px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04);color:#FFFFFF">Institucional</span>
+        </div>
+      </div>
+
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Metragem aproximada</span>
+        <span style="border-bottom:1px solid #B4522A;padding-bottom:12px;font-size:17px;color:#FFFFFF">320 m²<span style="color:#B4522A">|</span></span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">estado de foco</span>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Prazo desejado</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:12px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">Início previsto</span>
+      </label>
+
+      <label style="grid-column:span 2;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Mensagem</span>
+        <span style="border-bottom:1px solid rgba(255,255,255,0.10);padding:0 0 72px;font-size:17px;color:#55575C" style-hover="border-color:rgba(255,255,255,0.24)">Conte sobre o terreno, o programa e o modo de morar</span>
+      </label>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:32px">
+      <span style="padding:14px 28px;border-radius:999px;background:#FFFFFF;color:#000000;font-size:15px;font-weight:500;white-space:nowrap" style-hover="transform:scale(1.03)">Enviar briefing</span>
+      <span style="font-size:13px;line-height:1.5;color:#55575C">Respondemos em até dois dias úteis. [Lacuna] confirmar prazo de retorno.</span>
+    </div>
+  </form>
+
+  <aside style="display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.24)">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C;padding:20px 0 8px">Contato direto</span>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">E-mail</span><span style="font-size:15px;color:#8E9095">[Lacuna]</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Telefone / WhatsApp</span><span style="font-size:15px;color:#8E9095">[Lacuna]</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0"><span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Endereço do escritório</span><span style="font-size:15px;color:#8E9095">[Lacuna] · Balneário Camboriú, SC</span></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid rgba(255,255,255,0.06);padding-top:24px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Redes sociais</span>
+      <a href="#" style="font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:6px" style-hover="border-color:#B4522A">Instagram · [Lacuna]</a>
+      <a href="#" style="font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:6px" style-hover="border-color:#B4522A">Pinterest · [Lacuna]</a>
+      <a href="#" style="font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.10);padding-bottom:6px" style-hover="border-color:#B4522A">LinkedIn · [Lacuna]</a>
+    </div>
+
+    <a href="#" style="align-self:stretch;text-align:center;padding:16px 28px;border-radius:999px;border:1px solid rgba(255,255,255,0.10);color:#FFFFFF;font-size:15px;white-space:nowrap" style-hover="border-color:rgba(255,255,255,0.24);background:rgba(255,255,255,0.04)">Baixar o portfólio</a>
+  </aside>
+</section>
+
+<!-- ══ MAPA ══ -->
+<section data-screen-label="Mapa" style="padding:200px 64px 0;display:flex;flex-direction:column;gap:20px">
+  <div style="position:relative;height:520px;border-radius:32px;border:1px solid rgba(255,255,255,0.10);overflow:hidden;background:#050506">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.045) 0 1px,rgba(0,0,0,0) 1px 84px),repeating-linear-gradient(0deg,rgba(255,255,255,0.045) 0 1px,rgba(0,0,0,0) 1px 84px)"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(104deg,rgba(0,0,0,0) 34%,rgba(255,255,255,0.05) 34%,rgba(255,255,255,0.05) 36%,rgba(0,0,0,0) 36%)"></div>
+    <div style="position:absolute;left:0;right:0;top:64%;height:1px;background:rgba(255,255,255,0.08)"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(38% 46% at 46% 52%, rgba(240,178,122,0.08), rgba(0,0,0,0) 70%)"></div>
+
+    <div style="position:absolute;left:46%;top:52%;display:flex;flex-direction:column;align-items:flex-start;gap:10px;transform:translate(-50%,-50%)">
+      <span style="width:1px;height:56px;background:rgba(255,255,255,0.24)"></span>
+      <div style="display:flex;flex-direction:column;gap:6px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:16px;backdrop-filter:blur(20px) saturate(120%);-webkit-backdrop-filter:blur(20px) saturate(120%);box-shadow:0 8px 40px rgba(0,0,0,0.5);padding:18px 22px">
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8E9095">Escritório</span>
+        <span style="font-family:'Outfit',system-ui,sans-serif;font-weight:300;font-size:24px;letter-spacing:-0.01em;color:#FFFFFF;white-space:nowrap">Balneário Camboriú</span>
+        <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">[Lacuna] endereço</span>
+      </div>
+    </div>
+
+    <span style="position:absolute;top:28px;left:32px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">mapa em tratamento escuro · [Lacuna] coordenadas exatas</span>
+  </div>
+  <div style="display:flex;justify-content:space-between;gap:32px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+    <span>Santa Catarina · litoral norte</span>
+    <span>26.9906° S&nbsp;&nbsp;48.6350° W</span>
+  </div>
+</section>
+
+<footer data-screen-label="Rodapé" style="margin-top:200px;padding:96px 64px 40px;display:flex;flex-direction:column;gap:96px">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:64px;border-top:1px solid rgba(255,255,255,0.10);padding-top:64px">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-family:{{ scriptFont }},'Mrs Saint Delafield',cursive;font-size:72px;line-height:1;color:#FFFFFF">Leonardo Palma</span>
+      <span style="font-size:15px;color:#8E9095;letter-spacing:0.18em">arquitetura interiores e paisagismo</span>
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Balneário Camboriú · Santa Catarina</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Navegação</span>
+      <a href="Home - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Início</a>
+      <a href="Projetos - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Projetos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Escritório</a>
+      <a href="Servicos - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Serviços</a>
+      <a href="CASACOR - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">CASACOR</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Projetos</span>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Sobre Trapézios</a>
+      <a href="Projeto Casa Z - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Z</a>
+      <a href="CASACOR - Leonardo Palma.dc.html" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Harmonia do Caos</a>
+      <a href="#" style="font-size:15px;color:#8E9095" style-hover="color:#FFFFFF">Casa Breeze</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">Contato</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] e-mail</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] telefone / WhatsApp</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] endereço do escritório</span>
+      <span style="font-size:15px;color:#8E9095">[Lacuna] Instagram</span>
+      <a href="#" style="margin-top:8px;font-size:15px;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,0.24);padding-bottom:3px;align-self:flex-start" style-hover="border-color:#B4522A">Baixar o portfólio</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;gap:32px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#55575C">
+    <span>© Leonardo Palma</span>
+    <div style="display:flex;gap:40px">
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Política de Privacidade</a>
+      <a href="#" style="color:#55575C" style-hover="color:#8E9095">Crédito de desenvolvimento</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;scriptFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Mrs Saint Delafield&quot;,&quot;Style Script&quot;,&quot;La Belle Aurore&quot;],&quot;default&quot;:&quot;Mrs Saint Delafield&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marca&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { scriptFont: `'${this.props.scriptFont ?? 'Mrs Saint Delafield'}'` };
+  }
+}
+</script>
+</body>
+</html>
