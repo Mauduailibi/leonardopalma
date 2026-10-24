@@ -6,13 +6,13 @@ export function ContactMap() {
 
   return (
     <section className="flex flex-col gap-5 px-margin pt-section">
-      <div className="relative h-[520px] overflow-hidden rounded-xl border border-stroke bg-[#050506] max-lg:h-[380px]">
+      <div className="relative h-[520px] overflow-hidden rounded-xl border border-stroke bg-carbon max-lg:h-[380px]">
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{
             background:
-              "repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 84px), repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 84px)",
+              "repeating-linear-gradient(90deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 84px), repeating-linear-gradient(0deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 84px)",
           }}
         />
         <div
@@ -20,7 +20,7 @@ export function ContactMap() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(104deg, transparent 34%, rgba(255,255,255,0.05) 34%, rgba(255,255,255,0.05) 36%, transparent 36%)",
+              "linear-gradient(104deg, transparent 34%, rgba(0,0,0,0.05) 34%, rgba(0,0,0,0.05) 36%, transparent 36%)",
           }}
         />
         <div

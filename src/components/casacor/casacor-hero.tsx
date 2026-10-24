@@ -6,7 +6,7 @@ import { siteConfig } from "@/content/site"
 export function CasacorHero() {
   return (
     <section className="px-margin pt-6">
-      <div className="relative h-[900px] overflow-hidden rounded-xl border border-stroke max-lg:h-[640px] max-lg:rounded-lg">
+      <div className="on-photo relative h-[900px] overflow-hidden rounded-xl border border-stroke max-lg:h-[640px] max-lg:rounded-lg">
         <ImagePlaceholder
           src={casacorPage.hero.src}
           alt={casacorPage.hero.alt}

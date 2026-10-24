@@ -12,6 +12,9 @@ export function SiteHeader() {
   const { hidden, scrolled } = useScrollHeader()
   const isDesktop = useIsDesktop()
   const location = useLocation()
+  const path = location.pathname
+  const overPhoto =
+    !scrolled && (path === "/" || path === "/casacor" || path.startsWith("/projetos/"))
 
   return (
     <header
@@ -20,15 +23,15 @@ export function SiteHeader() {
         hidden && "-translate-y-full",
         scrolled
           ? "inset-x-0 top-0 bg-[color-mix(in_srgb,var(--void)_72%,transparent)] px-margin py-5 backdrop-blur-[16px]"
-          : "top-6 right-margin left-margin px-10 py-7 max-lg:top-3 max-lg:right-5 max-lg:left-5 max-lg:px-2 max-lg:py-3",
+          : "top-6 right-[max(var(--margin),calc((100vw-var(--max-w))/2+var(--margin)))] left-[max(var(--margin),calc((100vw-var(--max-w))/2+var(--margin)))] px-10 py-7 max-lg:top-6 max-lg:right-5 max-lg:left-5 max-lg:px-5 max-lg:py-5",
       )}
     >
-      <SiteLogo />
+      <SiteLogo className={cn(overPhoto && "on-photo")} />
 
       {isDesktop ? (
         <>
           <LayoutGroup>
-            <nav className="flex gap-1 rounded-pill border border-stroke bg-void/24 p-1.5 backdrop-blur-[16px]">
+            <nav className="flex gap-1 rounded-pill border border-stroke bg-void/80 p-1.5 backdrop-blur-[16px]">
             {navItems.map((item) => {
               const active =
                 item.href === "/projetos"
@@ -62,7 +65,9 @@ export function SiteHeader() {
           </Button>
         </>
       ) : (
-        <MobileNav />
+        <div className={cn(overPhoto && "on-photo")}>
+          <MobileNav />
+        </div>
       )}
     </header>
   )

@@ -42,7 +42,7 @@ export function HomeDefines() {
         <h2 className="m-0 type-h2 text-text">{homeDefines.title}</h2>
         <div className="flex flex-col gap-6">
           {homeDefines.principles.map((item) => (
-            <div key={item.index} className="relative overflow-hidden rounded-xl border border-stroke">
+            <div key={item.index} className="on-photo relative overflow-hidden rounded-xl border border-stroke">
               <ImagePlaceholder
                 src={homeDefines.image.src}
                 alt={item.title}
@@ -71,7 +71,7 @@ export function HomeDefines() {
       <div ref={pinRef} className="relative h-[240vh]">
         <div className="sticky top-[12vh] flex flex-col gap-12">
           <h2 className="m-0 type-h2 text-text">{homeDefines.title}</h2>
-          <div className="relative h-[700px] overflow-hidden rounded-xl border border-stroke">
+          <div className="on-photo relative h-[700px] overflow-hidden rounded-xl border border-stroke">
             <ImagePlaceholder
               src={homeDefines.image.src}
               alt="Fachada com brises de Aço Corten"

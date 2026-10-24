@@ -10,27 +10,27 @@
 
 :root {
   /* Base */
-  --void: #000000;
-  --carbon: #0a0b0c;
-  --graphite: #141517;
-  --graphite-hi: #1c1e21;
+  --void: #fafaf8;
+  --carbon: #f1f0ec;
+  --graphite: #ffffff;
+  --graphite-hi: #ecebe6;
 
   /* Traço */
-  --stroke: rgba(255, 255, 255, 0.1);
-  --stroke-hi: rgba(255, 255, 255, 0.24);
-  --rule: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(0, 0, 0, 0.12);
+  --stroke-hi: rgba(0, 0, 0, 0.3);
+  --rule: rgba(0, 0, 0, 0.08);
 
   /* Texto */
-  --text: #ffffff;
-  --text-dim: #8e9095;
-  --text-mute: #55575c;
+  --text: #0c0d0e;
+  --text-dim: #52555a;
+  --text-mute: #8f9298;
 
-  /* Inversão */
-  --invert: #ffffff;
-  --invert-text: #000000;
-  --invert-dim: #3a3c40;
-  --invert-mute: rgba(0, 0, 0, 0.28);
-  --invert-stroke: rgba(0, 0, 0, 0.16);
+  /* Inversão (cartão escuro entre cartões claros) */
+  --invert: #0c0d0e;
+  --invert-text: #ffffff;
+  --invert-dim: #c2c4c8;
+  --invert-mute: rgba(255, 255, 255, 0.32);
+  --invert-stroke: rgba(255, 255, 255, 0.2);
 
   /* Acento — Aço Corten */
   --corten: #b4522a;
@@ -38,10 +38,10 @@
   --corten-glow: rgba(180, 82, 42, 0.28);
 
   /* Vidro */
-  --glass: rgba(255, 255, 255, 0.06);
-  --glass-stroke: rgba(255, 255, 255, 0.14);
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-stroke: rgba(0, 0, 0, 0.1);
   --glass-blur: 20px;
-  --glass-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --glass-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 
   /* Tipografia */
   --font-display: "Outfit", "Kumbh Sans", system-ui, sans-serif;
@@ -105,6 +105,24 @@
   --input: var(--stroke);
   --ring: var(--corten);
   --radius: var(--r-md);
+}
+
+/* Texto sobre fotografia: mantém os tokens escuros nos blocos com overlay preto */
+.on-photo {
+  --text: #ffffff;
+  --text-dim: #c4c6ca;
+  --text-mute: #8e9095;
+  --stroke: rgba(255, 255, 255, 0.1);
+  --stroke-hi: rgba(255, 255, 255, 0.24);
+  --invert: #ffffff;
+  --invert-text: #000000;
+  --invert-dim: #3a3c40;
+  --invert-mute: rgba(0, 0, 0, 0.28);
+  --invert-stroke: rgba(0, 0, 0, 0.16);
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-stroke: rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  color: var(--text);
 }
 
 @theme inline {
@@ -323,8 +341,8 @@
 @utility placeholder-stripes {
   background-image: repeating-linear-gradient(
     112deg,
-    #0c0d0e 0 16px,
-    #16171a 16px 32px
+    #e7e6e1 0 16px,
+    #efeeea 16px 32px
   );
 }
 

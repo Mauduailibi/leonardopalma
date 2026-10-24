@@ -17,7 +17,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       to={`/projetos/${project.slug}`}
       data-cursor="Ver projeto"
       className={cn(
-        "group relative block overflow-hidden rounded-lg border border-stroke transition-[border-color] duration-[var(--dur-micro)] ease-[var(--ease-soft)] hover:border-stroke-hi",
+        "on-photo group relative block overflow-hidden rounded-lg border border-stroke transition-[border-color] duration-[var(--dur-micro)] ease-[var(--ease-soft)] hover:border-stroke-hi",
         wide
           ? "aspect-video max-lg:aspect-[16/10]"
           : "aspect-4/5",

@@ -25,7 +25,7 @@ export function RelatedProjectCard({
       to={`/projetos/${slug}`}
       data-cursor="Ver projeto"
       className={cn(
-        "group relative block overflow-hidden border border-stroke transition-[border-color] duration-[var(--dur-micro)] ease-[var(--ease-soft)] hover:border-stroke-hi",
+        "on-photo group relative block overflow-hidden border border-stroke transition-[border-color] duration-[var(--dur-micro)] ease-[var(--ease-soft)] hover:border-stroke-hi",
         compact ? "rounded-md" : "rounded-lg",
         landscape ? "aspect-[16/11]" : "aspect-4/5",
       )}

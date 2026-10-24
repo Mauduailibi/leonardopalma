@@ -19,7 +19,7 @@ export function ProjectHero({ project, index }: ProjectHeroProps) {
         ref={ref}
         data-signature
         data-cursor="Ver a obra"
-        className="sig relative h-[860px] overflow-hidden rounded-xl border border-stroke max-lg:h-[640px] max-lg:rounded-lg"
+        className="sig on-photo relative h-[860px] overflow-hidden rounded-xl border border-stroke max-lg:h-[640px] max-lg:rounded-lg"
       >
         <ImagePlaceholder
           src={project.assets.hero}

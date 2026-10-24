@@ -15,7 +15,7 @@ export function HomeProcess() {
         ) : null}
       </div>
 
-      <div className="relative h-[820px] overflow-hidden rounded-xl border border-stroke max-lg:h-auto max-lg:min-h-[560px]">
+      <div className="on-photo relative h-[820px] overflow-hidden rounded-xl border border-stroke max-lg:h-auto max-lg:min-h-[560px]">
         <ImagePlaceholder
           src={homeProcess.image.src}
           alt="Residência com piscina iluminada"

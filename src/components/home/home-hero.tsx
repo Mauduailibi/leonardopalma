@@ -21,7 +21,7 @@ export function HomeHero() {
 
   return (
     <section className="px-margin pt-6">
-      <div className="relative h-[940px] overflow-hidden rounded-xl border border-stroke max-lg:h-[660px] max-lg:rounded-lg">
+      <div className="on-photo relative h-[940px] overflow-hidden rounded-xl border border-stroke max-lg:h-[660px] max-lg:rounded-lg">
         <ImagePlaceholder
           src={homeHero.image.src}
           alt="Residência ao entardecer com luz quente interna"
