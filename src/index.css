@@ -479,3 +479,100 @@ html[data-sig] header .on-photo {
     display: none;
   }
 }
+
+/* ─────────────────────────────────────────
+   Mapa de contato — Leaflet + OpenStreetMap
+   ───────────────────────────────────────── */
+
+.contact-map .leaflet-container {
+  background: var(--carbon);
+  font-family: var(--font-body);
+}
+
+/* Tiles em cinza, no mesmo tom neutro do site */
+.contact-map .leaflet-tile-pane {
+  filter: grayscale(1) contrast(0.9) brightness(1.04);
+}
+
+/* Telas com zoom fracionário mostram emendas entre tiles. O Leaflet tenta
+   resolver com plus-lighter, mas somado ao filtro cinza isso gera linhas
+   brancas; 1px de sobreposição com mistura normal resolve sem artefatos. */
+.contact-map .leaflet-container img.leaflet-tile {
+  width: 257px !important;
+  height: 257px !important;
+  mix-blend-mode: normal;
+}
+
+.contact-map .leaflet-bar {
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  border-radius: var(--r-sm);
+  box-shadow: none;
+}
+
+.contact-map .leaflet-bar a {
+  width: 36px;
+  height: 36px;
+  border-bottom-color: var(--stroke);
+  background: var(--void);
+  color: var(--text);
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.contact-map .leaflet-bar a:hover {
+  background: var(--invert);
+  color: var(--invert-text);
+}
+
+.contact-map .leaflet-control-attribution {
+  background: color-mix(in srgb, var(--void) 80%, transparent);
+  color: var(--text-mute);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.contact-map .leaflet-control-attribution a {
+  color: var(--text-dim);
+}
+
+.map-pin__dot {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.map-pin__stem {
+  position: absolute;
+  bottom: 5px;
+  left: -0.5px;
+  width: 1px;
+  height: 56px;
+  background: var(--stroke-hi);
+}
+
+.map-pin__card {
+  position: absolute;
+  bottom: 61px;
+  left: -22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 22px;
+  border-radius: var(--r-md);
+  white-space: nowrap;
+}
+
+.map-pin__title {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}

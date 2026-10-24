@@ -33,7 +33,7 @@ export const casacorPage = {
     title: "Cinco autores, um espaço",
     credit: "Crédito fotográfico · [Lacuna]",
     photo: {
-      src: assetPaths.pages.escritorio.team,
+      src: gallery.gallery(3),
       caption: "retrato da equipe · cinco pessoas · preto e branco",
       alt: "Retrato em preto e branco da equipe do projeto",
     },
@@ -59,7 +59,7 @@ export const casacorPage = {
         halo: true,
       },
       {
-        src: assetPaths.pages.escritorio.hero,
+        src: gallery.gallery(2),
         caption: "retrato do arquiteto",
         alt: "Retrato do arquiteto Leonardo Palma",
         span: 2,
@@ -68,7 +68,7 @@ export const casacorPage = {
         grayscale: true,
       },
       {
-        src: gallery.gallery(3),
+        src: gallery.gallery(4),
         caption: "poltrona laranja com mesas laterais",
         alt: "Poltrona laranja com mesas laterais",
         span: 2,
@@ -77,7 +77,7 @@ export const casacorPage = {
         halo: true,
       },
       {
-        src: gallery.gallery(4),
+        src: gallery.gallery(6),
         caption: "detalhe de banco e mesa lateral",
         alt: "Detalhe de banco e mesa lateral",
         span: 2,
@@ -86,7 +86,7 @@ export const casacorPage = {
         offset: true,
       },
       {
-        src: gallery.gallery(5),
+        src: gallery.gallery(7),
         caption: "poltrona escultórica clara",
         alt: "Poltrona escultórica clara",
         span: 2,
@@ -94,7 +94,7 @@ export const casacorPage = {
         radius: "rounded-lg",
       },
       {
-        src: gallery.gallery(6),
+        src: gallery.gallery(5),
         caption: "salão da exposição com retratos de grande formato",
         alt: "Salão da exposição com retratos de grande formato",
         span: 3,
@@ -103,7 +103,7 @@ export const casacorPage = {
         halo: true,
       },
       {
-        src: assetPaths.pages.escritorio.team,
+        src: gallery.gallery(3),
         caption: "retrato da equipe · cinco pessoas · preto e branco",
         alt: "Retrato em preto e branco da equipe",
         span: 3,

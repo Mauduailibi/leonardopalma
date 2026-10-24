@@ -25,8 +25,6 @@ Exemplo de conversão: `cwebp -q 80 -m 6 -sharp_yuv -metadata none -resize 1600 
 
 ```
 casacor/hero.webp
-escritorio/hero.webp
-escritorio/team.webp
 contato/map.webp
 servicos/arquitetura.webp
 servicos/interiores.webp

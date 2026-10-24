@@ -19,15 +19,6 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projetos" element={<ProjectsPage />} />
           <Route path="/projetos/:slug" element={<ProjectPage />} />
-          <Route
-            path="/escritorio"
-            element={
-              <PlaceholderPage
-                title="Escritório"
-                description="Conheça a filosofia de projeto e a equipe por trás dos projetos de Leonardo Palma."
-              />
-            }
-          />
           <Route path="/servicos" element={<ServicesPage />} />
           <Route path="/casacor" element={<CasacorPage />} />
           <Route path="/contato" element={<ContactPage />} />

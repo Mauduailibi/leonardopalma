@@ -48,7 +48,14 @@ export function SiteFooter() {
           <span className="text-body text-text-dim">{siteConfig.contact.email}</span>
           <span className="text-body text-text-dim">{siteConfig.contact.phone}</span>
           <span className="text-body text-text-dim">{siteConfig.contact.address}</span>
-          <span className="text-body text-text-dim">{siteConfig.contact.instagram}</span>
+          <a
+            href={siteConfig.contact.instagramHref}
+            target="_blank"
+            rel="noreferrer"
+            className="self-start text-body text-text-dim transition-colors duration-[var(--dur-micro)] hover:text-text"
+          >
+            {siteConfig.contact.instagram}
+          </a>
           <a
             href="/assets/brand/portfolio.pdf"
             className="text-underline-hover mt-2 self-start text-body text-text"

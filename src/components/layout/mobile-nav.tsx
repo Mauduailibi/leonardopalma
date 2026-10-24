@@ -4,6 +4,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { AnimatePresence, motion, useReducedMotion, type Transition } from "motion/react"
 import { cn, padIndex } from "@/lib/utils"
 import { cta, navItems, siteConfig } from "@/content/site"
+import { contactPage } from "@/content/contact"
 import { Button } from "@/components/ui/button"
 import { SiteLogo } from "@/components/layout/site-logo"
 
@@ -11,9 +12,6 @@ import { SiteLogo } from "@/components/layout/site-logo"
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const
 const EASE_IN_OUT_Q = [0.76, 0, 0.24, 1] as const
 const EASE_IN = [0.7, 0, 0.84, 0] as const
-
-/* Coordenadas de Balneário Camboriú — mesmo bloco de dados técnicos dos projetos. */
-const COORDINATES = "26.9906° S · 48.6350° W"
 
 /* Copia posição e padding do header, para que logo e botão do painel caiam
    exatamente onde estavam — o header não se move, só o que está atrás dele. */
@@ -214,7 +212,7 @@ export function MobileNav() {
                       <dt className="text-text-mute">Local</dt>
                       <dd className="m-0 text-text-dim">{siteConfig.locationShort}</dd>
                       <dt className="text-text-mute">Coordenadas</dt>
-                      <dd className="m-0 text-text-dim">{COORDINATES}</dd>
+                      <dd className="m-0 text-text-dim">{contactPage.map.coordinatesLabel}</dd>
                     </dl>
                     <DialogPrimitive.Close asChild>
                       <Button asChild className="h-[52px] w-full">

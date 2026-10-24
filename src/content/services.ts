@@ -42,18 +42,14 @@ export const serviceDisciplines: ServiceDiscipline[] = [
     ],
     image: {
       src: assetPaths.pages.servicos.arquitetura,
-      caption: "imagem full-bleed · fachada com brises deslizantes de Aço Corten",
-      alt: "Fachada com brises deslizantes de Aço Corten",
+      caption: "Casa Sobre Trapézios · fachada com brises de Aço Corten e piscina",
+      alt: "Casa Sobre Trapézios: fachada com brises de Aço Corten e piscina ao entardecer",
     },
     inclusos: [
       { index: "01", label: "Relação com a paisagem e com o entorno" },
       { index: "02", label: "Conforto térmico — brises e orientação solar" },
       { index: "03", label: "Materiais de baixo impacto" },
-      {
-        index: "04",
-        label: "[Lacuna] escopo de entrega, etapas, prazos e faixa de investimento",
-        lacuna: true,
-      },
+      { index: "04", label: "Do estudo preliminar ao projeto executivo, com projeto legal para aprovação" },
     ],
     relatedVariant: "portrait",
     related: [
@@ -74,18 +70,14 @@ export const serviceDisciplines: ServiceDiscipline[] = [
     ],
     image: {
       src: assetPaths.pages.servicos.interiores,
-      caption: "imagem full-bleed · living com pé-direito duplo e iluminação em sanca",
-      alt: "Living com pé-direito duplo e iluminação em sanca",
+      caption: "Casa Z · painel Art Déco no living com pé-direito duplo",
+      alt: "Casa Z: painel Art Déco com escultura dourada no living de pé-direito duplo, com escada e sancas iluminadas",
     },
     inclusos: [
       { index: "01", label: "Marcenaria sob medida" },
       { index: "02", label: "Iluminação direta e indireta" },
       { index: "03", label: "Seleção de materiais nobres" },
-      {
-        index: "04",
-        label: "[Lacuna] escopo de entrega, etapas, prazos e faixa de investimento",
-        lacuna: true,
-      },
+      { index: "04", label: "Do conceito ao detalhamento executivo de marcenaria e iluminação" },
     ],
     relatedVariant: "compact",
     related: [
@@ -108,18 +100,14 @@ export const serviceDisciplines: ServiceDiscipline[] = [
     ],
     image: {
       src: assetPaths.pages.servicos.paisagismo,
-      caption: "imagem full-bleed · jardim lateral com passarela e projeto lumínico",
-      alt: "Jardim lateral com passarela e projeto lumínico",
+      caption: "Casa Sobre Trapézios · jardim lateral com passarela",
+      alt: "Casa Sobre Trapézios: jardim lateral com passarela em placas e vegetação densa",
     },
     inclusos: [
       { index: "01", label: "Alto índice de sombreamento" },
       { index: "02", label: "Baixa manutenção e pouca queda de folhas" },
       { index: "03", label: "Integração ao projeto lumínico e à arquitetura" },
-      {
-        index: "04",
-        label: "[Lacuna] escopo de entrega, etapas, prazos e faixa de investimento",
-        lacuna: true,
-      },
+      { index: "04", label: "Do estudo de implantação ao projeto executivo de plantio e iluminação" },
     ],
     relatedVariant: "landscape",
     related: [

@@ -13,7 +13,7 @@ export function HomeManifesto() {
           {homeManifesto.support}
         </p>
         <Button asChild variant="secondary" className="self-start max-lg:h-[52px] max-lg:self-stretch">
-          <Link to="/escritorio">{cta.viewOffice}</Link>
+          <Link to="/servicos">{cta.viewServices}</Link>
         </Button>
       </div>
     </section>

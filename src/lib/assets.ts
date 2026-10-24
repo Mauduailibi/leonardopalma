@@ -13,10 +13,6 @@ export const assetPaths = {
     casacor: {
       hero: "/assets/pages/casacor/hero.webp",
     },
-    escritorio: {
-      hero: "/assets/pages/escritorio/hero.webp",
-      team: "/assets/pages/escritorio/team.webp",
-    },
     contato: {
       map: "/assets/pages/contato/map.webp",
     },

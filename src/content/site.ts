@@ -11,14 +11,14 @@ export const siteConfig = {
   contact: {
     email: "[Lacuna] e-mail",
     phone: "[Lacuna] telefone / WhatsApp",
-    address: "[Lacuna] endereço do escritório",
-    instagram: "[Lacuna] Instagram",
+    address: "R. 2480, 93 · Sala 03 · Centro, Balneário Camboriú – SC",
+    instagram: "@arq.leonardopalma",
+    instagramHref: "https://www.instagram.com/arq.leonardopalma/",
   },
 } as const
 
 export const navItems = [
   { label: "Projetos", href: "/projetos" },
-  { label: "Escritório", href: "/escritorio" },
   { label: "Serviços", href: "/servicos" },
   { label: "CASACOR", href: "/casacor" },
   { label: "Contato", href: "/contato" },
@@ -28,7 +28,7 @@ export const cta = {
   startProject: "Iniciar um projeto",
   viewProject: "Ver o projeto",
   viewAllProjects: "Ver todos os projetos",
-  viewOffice: "Conheça o escritório",
+  viewServices: "Conheça os serviços",
   viewCasacor: "Ver o projeto completo",
   downloadPortfolio: "Baixar o portfólio",
 } as const

@@ -30,6 +30,7 @@ export function ContactAside() {
           <a
             key={item.label}
             href={item.href}
+            {...(item.href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
             className="border-b border-stroke pb-1.5 type-body text-text transition-[border-color] duration-[var(--dur-micro)] hover:border-corten"
           >
             {item.label}

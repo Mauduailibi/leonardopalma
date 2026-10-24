@@ -28,21 +28,28 @@ export const contactPage = {
     items: [
       { label: "E-mail", value: "[Lacuna]" },
       { label: "Telefone / WhatsApp", value: "[Lacuna]" },
-      { label: "Endereço do escritório", value: "[Lacuna] · Balneário Camboriú, SC" },
+      {
+        label: "Endereço do escritório",
+        value: "R. 2480, 93 · Sala 03 · Centro, Balneário Camboriú – SC",
+      },
     ],
     socialTitle: "Redes sociais",
     social: [
-      { label: "Instagram · [Lacuna]", href: "#" },
+      { label: "Instagram · @arq.leonardopalma", href: "https://www.instagram.com/arq.leonardopalma/" },
       { label: "Pinterest · [Lacuna]", href: "#" },
       { label: "LinkedIn · [Lacuna]", href: "#" },
     ],
   },
   map: {
-    caption: "mapa em tratamento escuro · [Lacuna] coordenadas exatas",
     pinKicker: "Escritório",
-    pinTitle: "Balneário Camboriú",
-    pinAddress: "[Lacuna] endereço",
-    footerLeft: "Santa Catarina · litoral norte",
-    footerRight: "26.9906° S  48.6350° W",
+    pinTitle: "Centro · Balneário Camboriú",
+    pinAddress: "R. 2480, 93 · Sala 03",
+    address: "R. 2480, 93 · Sala 03 · Centro · Balneário Camboriú – SC · 88330-407",
+    /* Aproximada: início da R. 2480, junto à Av. Brasil (CEP 88330-407) */
+    coordinates: { lat: -26.9948, lng: -48.6292 },
+    coordinatesLabel: "26.9948° S · 48.6292° W",
+    routeLabel: "Traçar rota",
+    routeHref:
+      "https://www.google.com/maps/dir/?api=1&destination=R.+2480%2C+93+-+Centro%2C+Balne%C3%A1rio+Cambori%C3%BA+-+SC%2C+88330-407",
   },
 } as const
