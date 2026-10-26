@@ -33,7 +33,6 @@ export function ProjectHero({ project, index }: ProjectHeroProps) {
         ref={ref}
         data-signature
         data-phase={phase}
-        data-cursor="Ver a obra"
         className="sig on-photo relative h-[860px] overflow-hidden rounded-xl border border-stroke max-lg:h-[640px] max-lg:rounded-lg"
       >
         <ImagePlaceholder
